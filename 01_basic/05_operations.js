@@ -10,8 +10,8 @@ console.log("str" + 2);  //str2
 console.log("1" + 2);  //12
 console.log(2 + "str"); //2str
 console.log(1 + "2"); //12
-console.log(2+2+"2"); //42
-console.log("2"+2+2); //222
+console.log(2+2+"2"); //42 👀 👈
+console.log("2"+2+2); //222 👀 👈
 
 
 console.log(2+4*5/9); //wrong way
@@ -26,7 +26,7 @@ console.log(+false);  //0
 console.log(-false);  //-0
 
 console.log(+""); //0
-console.log(+"mk"); //NaN
+console.log(+"mk"); //NaN 👀 👈
 
 let num1, num2, num3
 num1 = num2 = num3 = 2+9 //wrong way

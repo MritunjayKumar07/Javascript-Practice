@@ -1,9 +1,9 @@
-// Two types of dataType 
+// Two types of dataType (Primitive,Nonprimitive/Refrence)
 // Leacture :- https://www.youtube.com/watch?app=desktop&v=sscX432bMZo&t=352s
 // Time For Leacture Learn dataType is :- 1:37 to --
-// 1> Primitive (Call by value) 7 types 
-//Jub bhe ap koi variable declear kerta hy to uska copy milta hy ap ko
-// (insub value ka refrence nhi dia jata hy coppy ker ka dia jata hy or jo bhe changess kerta hy wo coppy ma changess kerta hy.
+// 1> Primitive (Call by value) 7 types 👈👀
+/*In Primitive DatType, Jub bhe ap koi variable declear kerta hy to uska copy milta hy ap ko,👈👀
+ (insub value ka refrence nhi dia jata hy coppy ker ka dia jata hy or jo bhe changess kerta hy wo coppy ma changess kerta hy.*/👈👀
 
 // Example :-
 let myYoutubeName = 'MritunjayKumar'
@@ -12,7 +12,7 @@ anotherChannel = "YoutubeChannel"
 console.log([myYoutubeName, anotherChannel])
 // return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
 
-// :- String,Numbers,Booleinu,Null,Undefined,Symbol,BigInteger.
+// :- String,Numbers,Booleinu,Null,Undefined,Symbol,BigInteger.👈👀
 
 //Example:-
 const id = Symbol("123")
@@ -27,10 +27,12 @@ console.log([id, anotherid, typeof id, typeof anotherid, id === anotherid]);
 // const bitNumber = 21654654516581454516484515454n
 // console.log(typeof bitNumber); return:-BigInt
 
-// 2>Nonprimitive/Refrence Type (call by refrence) 3 types:-
+// 2>Nonprimitive/Refrence Type (call by refrence) 3 types:- 👈👀
+/*In NonPrimitive DatType, Jub bhe ap koi variable declear kerta hy to uska refrence milta hy ap ko,👈👀
+ (insub value ka copy nhi dia jata hy direct refrence utha ka dia jata hy or jo bhe changess kerta hy wo direct Original value ma changess kerta hy ap.*/👈👀
 // Array, Objects, Functions
 //Example:-
-const heroArr = ['Github', "gitbas", "visualstudio"] //Array(It's obj also DataType)
+const heroArr = ['Github', "gitbas", "visualstudio"] //Array(It's also obj DataType)
 const heroObj = {
     name: 'Github',
     age: 22,
@@ -53,11 +55,11 @@ console.table([typeof heroArr, typeof heroObj, typeof heroFunn, typeof null]);
 
 
 
-
-// ----------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // MEMORY :- 
 
-// Two Types a>Stack, b>Heap 
+//Two types of MEMORY (Stack,Heap):-
 
 // Primitive Datatype use the Stack memory. (Jub bhe ap koi variable declear kerta hy to uska copy milta hy ap ko).
 // Non-Primitive Datatype use the Heap memory. (Jub bhe ap koi variable declear kerta hy to uska Refrence milta hy ap ko, To jo bhe ap change karinga to original value ma changes hoga.)

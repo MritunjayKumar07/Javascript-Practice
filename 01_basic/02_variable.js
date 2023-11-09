@@ -1,7 +1,7 @@
 const fixedValue = 9737678727
 let workInsideScope = "Hello Git.."
 var workwholeCode = "MritunjayKumar07"
-variablevalue = "India" //it's also work but good way.
+variablevalue = "India" //it's also work but not good way.
 
 let accountVar;
 
