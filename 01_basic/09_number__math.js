@@ -13,3 +13,6 @@ console.log(balance.toFixed(2)) //100.00
 // toPrecision:ƒ toPrecision()
 // toString:ƒ toString()
 // valueOf:ƒ valueOf()
+
+
+//time : 2:35
