@@ -29,7 +29,7 @@ console.log(url.includes('mritunjay')); //true
 console.log(url.split('/')); //[ 'https:', '', 'mritunjay:', '', 'com%20domain%20kumar' ]
 
 
-// All method & function of string String (f mins function)
+// All function of string String (f mins function)
 // anchor: ƒ anchor()
 // at: ƒ at()
 // big:ƒ big()
