@@ -1,0 +1,124 @@
+#1>Difference Bitween Null or Undefined or symbol:-
+1>Null(Object) :- let val = "";
+2>Undefined(Undefined) : - let val;
+3>Symbol  :- unique;
+
+#2>Conversion:-
+1>Convert to Number :- Number() 
+2>Convert to Boolean :- Boolean()
+3>Convert to String :- String()
+
+Nots (Conversion): 
+"33" => 33
+"33abc" => NaN
+ null => 0
+ Undefined => NaN
+ true => 1
+ false => 0
+ "Mritun" => NaN
+
+#3>Operations:(+,-,<,>,*,/,%,==,!=,===,>=,<=)
+"str"+2=>str2
+ 1+"str"=>1str
+ 1+"2"=>12
+ 2+2+"2"=>42
+ "2"+2+2=>222
+ 2+4*5/9 => Wrong Way Use this way ((2+4)*5)/9
+ +true =>1
+ -true =>-1
+ +false =>0
+ -false =>-0
+ +"" => 0
+ +"mk" => NaN
+ num1 = num2= num3 = 2+9
+ game = 100
+ game++, game-- postfix operater
+ ++game, --game prefix operater 
+
+
+#4>DataType:-
+1>Primitive (number, string, boolean, bigint, null, undefined, symbol) :- 
+2>Non Primitive(Object{}, Array(), Functions()) :- 
+
+1>Primitive DataType (Call by value):-
+  In Primitive DatType, Jub bhe ap koi variable 
+  declear kerta hy to uska copy milta hy ap ko,👈👀
+  insub value ka refrence nhi dia jata hy coppy ker
+  ka dia jata hy or jo bhe changess kerta hy wo coppy 
+  ma changess kerta hy.
+  
+  Example :- 
+    let myYoutubeName = 'MritunjayKumar'
+    let anotherChannel = myYoutubeName
+    anotherChannel = "YoutubeChannel"
+    console.log([myYoutubeName, anotherChannel])
+    return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
+
+    const id = Symbol("123")
+    const anotherid = Symbol("123")
+    console.log([id, anotherid, typeof id, typeof anotherid, id === anotherid]);
+    return :- [ Symbol(123), Symbol(123), 'symbol', 'symbol', false ]
+    id and anotherid not same becouse symbol() datatype is convert the spacel and unique .
+    symbol() is convert any value into unique value.
+
+    const bitNumber = 21654654516581454516484515454n
+    console.log(typeof bitNumber); return:-BigInt
+
+2>NonPrimitive/Refrence (call by refrence):-
+  In NonPrimitive DatType, Jub bhe ap koi variable declear 
+  kerta hy to uska refrence milta hy ap ko,👈👀
+  insub value ka copy nhi dia jata hy direct refrence utha 
+  ka dia jata hy or jo bhe changess kerta hy wo direct 
+  Original value ma changess kerta hy ap.
+
+  Example :-
+    const heroArr = ['Github', "gitbas", "visualstudio"]
+    const heroObj = { name: 'Github', age: 22, isLoggIn: true}
+    const heroFunn = function () {console.log("My Fun")}
+    console.log([typeof heroArr, typeof heroObj, typeof heroFunn])
+    return:- ['object;, 'object', 'function']
+
+#5>MEMORY (Two Types:-Stack,Heap):-
+  1>Primitive Datatype use the Stack memory.
+
+  Example (Memory work):
+  let myYoutubeName2 = 'MritunjayKumar'
+  let anotherChannel2 = myYoutubeName2
+  anotherChannel2 = "YoutubeChannel"
+  console.log([myYoutubeName2, anotherChannel2])
+  return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
+   ┌─────────────────────┐
+   │                     │
+   ├─────────────────────┤
+   │                     │
+   ├─────────────────────┤
+   │   YoutubeChannel    │ <--Change Value
+   ├─────────────────────┤
+   │   MritunjayKumar    │ <--Copy Value
+   ├─────────────────────┤
+   │   MritunjayKumar    │ <--Original Value
+   └─────────────────────┘
+        STACK Memory
+
+  2>Non-Primitive Datatype use the Heap memory.
+
+  Example (Memory Work):
+  let userOne = {
+    email: 'user@google.com',
+    upi: 'user@yblu',
+  }
+  console.log([userOne, userTwo])
+  return :- 
+  [{ email: 'mritunjay@gmail.com', upi: 'user@yblu' },
+   { email: 'mritunjay@gmail.com', upi: 'user@yblu' }]
+  ┌─────────────────────┐
+  │                     │                                   ┌─────────────────────────────────────────┐     
+  ├─────────────────────┤                                   │                                         │
+  │                     │                                   │     {                                   │
+  ├─────────────────────┤                                   │         email: 'user@google.com',       │
+  │    userTwo          │ <-its also get refrence of this ->│         upi: 'user@yblu',               │
+  ├─────────────────────┤                                   │      }                                  │
+  │     userOne         │ <--      Refrence of thi       -->│                                         │
+  └─────────────────────┘                                   └─────────────────────────────────────────┘
+        Heap Memory                                                               
+

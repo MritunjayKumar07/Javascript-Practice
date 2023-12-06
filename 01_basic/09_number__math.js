@@ -15,4 +15,4 @@ console.log(balance.toFixed(2)) //100.00
 // valueOf:ƒ valueOf()
 
 
-//time : 2:35
+//----------------------MATHS--------------------------
