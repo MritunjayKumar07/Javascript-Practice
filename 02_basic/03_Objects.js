@@ -66,3 +66,6 @@ UnFreezonObject.greetingTwo = function(){
 console.log(UnFreezonObject.greeting) // return :- [Function (anonymous)]
 console.log(UnFreezonObject.greeting()) //return :- Hello Function...
 console.log(UnFreezonObject.greetingTwo()) //return :- Hello Function... Mritunjay
+
+
+//Object Literals end;
