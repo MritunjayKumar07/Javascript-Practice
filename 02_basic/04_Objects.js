@@ -88,9 +88,13 @@ console.log([city, age, name])
     "coursename":"Js in Hindi",
     "price":"free"
 }
+or
+[
+    {},
+    {},
+    {},
+]
 We hold in one variable in fruntend*/
-
-//Call Api from JSON:-
 
 
 
