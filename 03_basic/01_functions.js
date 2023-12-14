@@ -76,4 +76,33 @@ function loginDefoult(userName = "Kumar") {
 console.log(loginDefoult()) // return :- Kumar just logged in... 
 console.log(loginDefoult("Mritunjay")) // return :- Mritunjay just logged in... 
 
-//--------------------------Time :- 4:54:33 --------------------------
+console.log("------------------------------------multiple value pass-----------------------------")
+
+function calculateCartPrice(...num1){ //... this is rest operater (... define based on use case it's also spred operater or rest operater.)
+    return num1;
+}
+
+console.log(calculateCartPrice(200,100,500, 2000)) // return :- [ 200, 100, 500, 2000 ]
+
+//or 
+
+function calculateCartPriceDifferent(val1, val2, ...num1){
+    return num1;
+}
+
+console.log(calculateCartPriceDifferent(200,100,500,2000)) // return :- [ 500, 2000 ]
+
+const user = {
+    userName:"Mritunjay",
+    price:90,
+}
+
+function handleObject(anyObject) {
+   console.log(`UserName if ${anyObject.userName} & Price is ${anyObject.price}.`)
+}
+handleObject(user);// return :- UserName if Mritunjay & Price is 90.
+
+function handleArray(anyArray) { 
+    return anyArray[0];
+ }
+console.log( handleArray([200,300,400,500]))
