@@ -45,3 +45,16 @@ if (true) {
 }
 
 //Browser, Node and Yaha Scope differnent hota hy
+
+console.log("------------------------------------05-----------------------------")
+//05:-
+console.log(AddTwoValue(3)) // retutn :- 4
+function AddTwoValue(num) {
+    return num + 1;
+}
+
+// console.log(AddTwo(7)); // return :- RefrenceError: Cannot access 'AddTwo' before initialization.
+
+const AddTwo = function (num) {
+    return num + 1
+}
