@@ -44,3 +44,4 @@ if (true) {
     console.log([a3, b3]) // return :- [ 1050, 2050 ]
 }
 
+//Browser, Node and Yaha Scope differnent hota hy
