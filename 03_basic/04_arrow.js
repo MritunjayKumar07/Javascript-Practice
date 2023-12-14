@@ -18,5 +18,5 @@ console.log(addTwo3())//return :-undefine
 const addTwo4 = () => ({useName:"Mritunjay"})//Implicet return
 console.log(addTwo4())//return :-{ useName: 'Mritunjay' }
 
-
+//--------------------------------------------------------Time :- 5:48:23 -------------------------------
 
