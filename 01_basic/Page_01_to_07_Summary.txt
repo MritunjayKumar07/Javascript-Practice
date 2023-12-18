@@ -1,4 +1,4 @@
-#1>Difference Bitween Null or Undefined or symbol:-
+#1>Difference Bitween Null , Undefined & symbol:-
 1>Null(Object) :- let val = "";
 2>Undefined(Undefined) : - let val;
 3>Symbol  :- unique;
