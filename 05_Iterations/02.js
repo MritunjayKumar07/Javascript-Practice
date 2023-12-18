@@ -30,19 +30,6 @@ for (const i in val) {
     console.log(i) 
 } //return :- 0 1 2 3 4 5 6 7 8
 
-
-console.log('---------------------------------')
-
-//foreach loop :-
-arr.forEach(element => {
-    console.log(element)
-});//return :- mk sk pk
-
-obj.forEach(element => {
-    console.log(element)
-});//return :- { '1':'mk' }{ '2':'sk' }{ '3': 'pk' }
-
-
 console.log('---------------------------------')
 
 //map loop :-
@@ -95,5 +82,3 @@ for (const key in map) {
     console.log(key)
 } // return :- empty
 
-
-//-------------------Time :- 8:10:10 ---------------------
