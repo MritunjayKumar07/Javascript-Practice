@@ -1,11 +1,11 @@
-const name  =  'Mritunjay Kumar' //Declear new string
-const repoCount = 50  //Declear new string
+const name = "Mritunjay Kumar"; //Declear new string
+const repoCount = 50; //Declear new string
 
-console.log(name +' '+ repoCount + ' Coin...');// Not Good Way
-console.log(`${name} ${repoCount} Coin...`);//Correct Way
+console.log(name + " " + repoCount + " Coin..."); // Not Good Way
+console.log(`${name} ${repoCount} Coin...`); //Correct Way
 
 //try in browser console:-new String('Mritunjay Kumar'); //in browser console all method present related to strong
-const gameName = new String('Mritunjay Kumar'); //new use to create object. Also declear new string.
+const gameName = new String("Mritunjay Kumar"); //new use to create object. Also declear new string.
 console.log(gameName);
 // return : [String: 'Mritunjay Kumar']
 //in sub ma original value change nhi hua hy.
@@ -16,18 +16,17 @@ console.log(gameName.__proto__); //return :{} //inside {} all value exist.
 console.log(gameName.length);
 console.log(gameName.toUpperCase());
 console.log(gameName.charAt(2));
-console.log(gameName.indexOf('t'));
+console.log(gameName.indexOf("t"));
 
-const newString = "   Mritunjay    "
-console.log(newString); //return :    Mritunjay    
+const newString = "   Mritunjay    ";
+console.log(newString); //return :    Mritunjay
 console.log(newString.trim()); //return : Mritunjay
 
-const url = "https://mritunjay://com%20domain%20kumar"
-console.log(url.replace('%20', '_')); // https://mritunjay://com_domain%20kumar
-console.log(url.includes('sundar')); //false
-console.log(url.includes('mritunjay')); //true
-console.log(url.split('/')); //[ 'https:', '', 'mritunjay:', '', 'com%20domain%20kumar' ]
-
+const url = "https://mritunjay://com%20domain%20kumar";
+console.log(url.replace("%20", "_")); // https://mritunjay://com_domain%20kumar
+console.log(url.includes("sundar")); //false
+console.log(url.includes("mritunjay")); //true
+console.log(url.split("/")); //[ 'https:', '', 'mritunjay:', '', 'com%20domain%20kumar' ]
 
 // All function of string String (f mins function)
 // anchor: ƒ anchor()

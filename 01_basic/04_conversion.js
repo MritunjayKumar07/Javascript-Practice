@@ -1,10 +1,10 @@
-let strVal = "90"
+let strVal = "90";
 console.log(typeof strVal);
-let strToNum = Number(strVal)
+let strToNum = Number(strVal);
 console.table([typeof strToNum, strToNum]);
 
-strVal = "90e" //or you use undefined
-strToNum = Number(strVal)
+strVal = "90e"; //or you use undefined
+strToNum = Number(strVal);
 console.table([typeof strToNum, strToNum]);
 
 // return:-
@@ -15,9 +15,8 @@ console.table([typeof strToNum, strToNum]);
 // │    1    │   NaN    │  //Note a number. it's a type.
 // └─────────┴──────────┘
 
-
-strVal = null
-strToNum = Number(strVal)
+strVal = null;
+strToNum = Number(strVal);
 console.table([typeof strToNum, strToNum]);
 
 // return:-
@@ -25,12 +24,11 @@ console.table([typeof strToNum, strToNum]);
 // │ (index) │  Values  │
 // ├─────────┼──────────┤
 // │    0    │ 'number' │
-// │    1    │    0     │  
+// │    1    │    0     │
 // └─────────┴──────────┘
 
-
-strVal = undefined
-strToNum = Number(strVal)
+strVal = undefined;
+strToNum = Number(strVal);
 console.table([typeof strToNum, strToNum]);
 
 // return:-
@@ -38,15 +36,15 @@ console.table([typeof strToNum, strToNum]);
 // │ (index) │  Values  │
 // ├─────────┼──────────┤
 // │    0    │ 'number' │
-// │    1    │   NaN    │  
+// │    1    │   NaN    │
 // └─────────┴──────────┘
 
-strVal = true // or you use False(False return 0, True return 1 and type is boolean)
-strToNum = Number(strVal)
+strVal = true; // or you use False(False return 0, True return 1 and type is boolean)
+strToNum = Number(strVal);
 console.table([typeof strToNum, strToNum]);
 
-strVal = "GIthub" 
-strToNum = Number(strVal)
+strVal = "GIthub";
+strToNum = Number(strVal);
 console.table([typeof strToNum, strToNum]);
 
 // return:-
@@ -54,11 +52,8 @@ console.table([typeof strToNum, strToNum]);
 // │ (index) │  Values  │
 // ├─────────┼──────────┤
 // │    0    │ 'number' │
-// │    1    │   NaN    │  
+// │    1    │   NaN    │
 // └─────────┴──────────┘
-
-
-
 
 // Nots:-
 //"33" => 33

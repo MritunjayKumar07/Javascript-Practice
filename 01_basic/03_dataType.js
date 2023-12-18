@@ -1,6 +1,6 @@
-let numberType = 123   
-let strintType = "Hello "  
-let booleanType = false
+let numberType = 123;
+let strintType = "Hello ";
+let booleanType = false;
 
 //PRIMITIVE DATATYPE:-
 
@@ -12,10 +12,10 @@ let booleanType = false
 //🤔undefined => ex: val
 //🤔symbol => unique
 
-console.table([typeof null,typeof undefined]);
-// return :- 
+console.table([typeof null, typeof undefined]);
+// return :-
 // ┌─────────┬─────────────┐
-// │ (index) │   Values    │   
+// │ (index) │   Values    │
 // ├─────────┼─────────────┤
 // │    0    │  'object'   │ //💠null is object💠 it's language problom or null define object by language
 // │    1    │ 'undefined' │
@@ -27,4 +27,3 @@ console.table([typeof null,typeof undefined]);
 //👉Array =>  ex:a = new Array();,b = new Array(10);,d = new Array(1, 2, 3, "Hello");
 
 //CHEAK TYPE OF DATA:-
-

@@ -1,49 +1,46 @@
 const user = {
-    userName:"Mritunjay Kumar",
-    price:999,
-    welcomeMessage:function () {
-        console.log(`${this.userName} get discount Rs ${this.price}`);//'this' is get the current context ant the current contect is parents scope.
-        
-    }
-}
+  userName: "Mritunjay Kumar",
+  price: 999,
+  welcomeMessage: function () {
+    console.log(`${this.userName} get discount Rs ${this.price}`); //'this' is get the current context ant the current contect is parents scope.
+  },
+};
 
 // user.welcomeMessage // return nothing return :-
-user.welcomeMessage() //return :-Mritunjay Kumar get discount Rs 999
-user.userName = "Amit" 
-user.welcomeMessage() //return :-Amit get discount Rs 999
+user.welcomeMessage(); //return :-Mritunjay Kumar get discount Rs 999
+user.userName = "Amit";
+user.welcomeMessage(); //return :-Amit get discount Rs 999
 
 const user2 = {
-    userName:"Mritunjay Kumar",
-    price:999,
-    welcomeMessage:function () {
-        console.log(`${this.userName} get discount Rs ${this.price}`);//'this' is get the current context ant the current contect is parents scope.
-        console.log(this)
-        
-    }
-}
+  userName: "Mritunjay Kumar",
+  price: 999,
+  welcomeMessage: function () {
+    console.log(`${this.userName} get discount Rs ${this.price}`); //'this' is get the current context ant the current contect is parents scope.
+    console.log(this);
+  },
+};
 
 // user.welcomeMessage // return nothing return :-
-user2.welcomeMessage() //return :-Mritunjay Kumar get discount Rs 999 { userName: 'Mritunjay Kumar', price: 999, welcomeMessage: [Function: welcomeMessage]}
-user2.userName = "Amit" 
-user2.welcomeMessage() //return :-Amit get discount Rs 999 {  userName: 'Amit',  price: 999,  welcomeMessage: [Function: welcomeMessage]}
+user2.welcomeMessage(); //return :-Mritunjay Kumar get discount Rs 999 { userName: 'Mritunjay Kumar', price: 999, welcomeMessage: [Function: welcomeMessage]}
+user2.userName = "Amit";
+user2.welcomeMessage(); //return :-Amit get discount Rs 999 {  userName: 'Amit',  price: 999,  welcomeMessage: [Function: welcomeMessage]}
 
-console.log(this) // return :- {} //Becoune we use node in console or windows print diffrent
-//Browser ks ander Gloable object hy windows Object. 
+console.log(this); // return :- {} //Becoune we use node in console or windows print diffrent
+//Browser ks ander Gloable object hy windows Object.
 
-const functionThis1 = ()=> {
-    let userName = "Mritunjay"
-    console.log(this.userName);
-    console.log(this);
-}
+const functionThis1 = () => {
+  let userName = "Mritunjay";
+  console.log(this.userName);
+  console.log(this);
+};
 
-functionThis1() //'this' Work Only Object not in Function return:- undefined {}
-
+functionThis1(); //'this' Work Only Object not in Function return:- undefined {}
 
 function functionThis() {
-    console.log(this)
+  console.log(this);
 }
 
-functionThis()//return use method and function for function
+functionThis(); //return use method and function for function
 /*Return :- <ref *1> Object [global] {
     global: [Circular *1],
     clearImmediate: [Function: clearImmediate],
@@ -64,8 +61,6 @@ functionThis()//return use method and function for function
     fetch: [Function: fetch],
     crypto: [Getter]
   }*/
-
-
 
 /*when i use this line 'console.log(this)' in windows/console: 
 return :-  THis all Are Windows event's
@@ -1199,6 +1194,3 @@ Symbol(Symbol.toStringTag):"Window"
 
 
 */
-
-
-

@@ -4,57 +4,63 @@
 let a = 10;
 const b = 20;
 var c = 30;
-console.log([a, b, c]) // return :- [ 10, 20, 30 ]
+console.log([a, b, c]); // return :- [ 10, 20, 30 ]
 
-console.log("------------------------------------02-----------------------------")
+console.log(
+  "------------------------------------02-----------------------------"
+);
 //02:-
 var c1 = 300;
 
 if (true) {
-    let a1 = 10;
-    const b1 = 20;
-    var c1 = 30;
+  let a1 = 10;
+  const b1 = 20;
+  var c1 = 30;
 }
 
 // console.log(a1) // return :- ReferenceError: a1 is not defined
 // console.log(b1) // return :- ReferenceError: b1 is not defined
-console.log(c1) // return :- 30
+console.log(c1); // return :- 30
 
 //Any variable declear in scope Called Block Scope.
 //Any Variable declear in outSide of function called Global Scope.
 
-
-console.log("------------------------------------03-----------------------------")
+console.log(
+  "------------------------------------03-----------------------------"
+);
 //03:-
 let a2 = 150;
 const b2 = 250;
 if (true) {
-    let a2 = 110;
-    const b2 = 210;
-    console.log([a2, b2]) // return :- [ 110, 210 ]
+  let a2 = 110;
+  const b2 = 210;
+  console.log([a2, b2]); // return :- [ 110, 210 ]
 }
-console.log([a2, b2]) // return :- [ 150, 250 ]
+console.log([a2, b2]); // return :- [ 150, 250 ]
 
-
-console.log("------------------------------------04-----------------------------")
+console.log(
+  "------------------------------------04-----------------------------"
+);
 //04:-
 let a3 = 1050;
 const b3 = 2050;
 if (true) {
-    console.log([a3, b3]) // return :- [ 1050, 2050 ]
+  console.log([a3, b3]); // return :- [ 1050, 2050 ]
 }
 
 //Browser, Node and Yaha Scope differnent hota hy
 
-console.log("------------------------------------05-----------------------------")
+console.log(
+  "------------------------------------05-----------------------------"
+);
 //05:-
-console.log(AddTwoValue(3)) // retutn :- 4
+console.log(AddTwoValue(3)); // retutn :- 4
 function AddTwoValue(num) {
-    return num + 1;
+  return num + 1;
 }
 
 // console.log(AddTwo(7)); // return :- RefrenceError: Cannot access 'AddTwo' before initialization.
 
 const AddTwo = function (num) {
-    return num + 1
-}
+  return num + 1;
+};

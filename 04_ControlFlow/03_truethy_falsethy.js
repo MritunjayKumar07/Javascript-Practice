@@ -1,23 +1,24 @@
-const userEmail = ""
+const userEmail = "";
 if (userEmail) {
-    console.log("Got User Name")
+  console.log("Got User Name");
 } else {
-    console.log("Do Not Got User Eamil") // this return
+  console.log("Do Not Got User Eamil"); // this return
 }
 //Cheak Array is empty or not
-const Cheakarr = []
+const Cheakarr = [];
 if (Cheakarr.length > 0) {
-    console.log('Cheakarr is not empty')
+  console.log("Cheakarr is not empty");
 } else if (Cheakarr.length === 0) {
-    console.log('Cheakarr is empty')
+  console.log("Cheakarr is empty");
 }
 
 //Cheak Object is empty or not
-const CheakObj = {}
-if (Object.keys(CheakObj).length > 0) {  //return Array :- Object.keys(CheakObj)
-    console.log('CheakObj is not empty')
+const CheakObj = {};
+if (Object.keys(CheakObj).length > 0) {
+  //return Array :- Object.keys(CheakObj)
+  console.log("CheakObj is not empty");
 } else if (Object.keys(CheakObj).length === 0) {
-    console.log('CheakObj is empty')
+  console.log("CheakObj is empty");
 }
 
 /*Imp:-
@@ -28,7 +29,6 @@ false == '' > true
 
 //falsethy Values:- flase, 0, -0(false), 0n (BigIn?t), null, undefined, NaN
 //truethy Values:- 'false', "0", " ", [], {}, function(){},
-
 
 //Nullish Coalescing Operator (??) :null undefined
 /*??:-Useful in situations where we want to provide a default value
@@ -48,16 +48,14 @@ console.log(username); // Output: Anonymous
 
 let vall;
 vall = 5 ?? 10;
-console.log(vall) //return 5
+console.log(vall); //return 5
 
-console.log(null ?? 15) // Return: 15
-console.log(undefined ?? 25) // Return: 25
-console.log(50 ?? 25) // Return: 50
+console.log(null ?? 15); // Return: 15
+console.log(undefined ?? 25); // Return: 25
+console.log(50 ?? 25); // Return: 50
 
 //Terniary operator:- same like if else
 // const Terniaryval = condition ? true : false // syntex
-console.log(5 > 2? 5 : 2);// Return: 5
-console.log(true ? 5 : 2)// Return: 5
-console.log(false ? 5 : 2)// Return: 2
-
-
+console.log(5 > 2 ? 5 : 2); // Return: 5
+console.log(true ? 5 : 2); // Return: 5
+console.log(false ? 5 : 2); // Return: 2
