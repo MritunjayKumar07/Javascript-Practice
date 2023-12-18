@@ -8,7 +8,7 @@
 2>Convert to Boolean :- Boolean()
 3>Convert to String :- String()
 
-Nots (Conversion): 
+Nots (Conversion Number): 
 "33" => 33
 "33abc" => NaN
  null => 0
