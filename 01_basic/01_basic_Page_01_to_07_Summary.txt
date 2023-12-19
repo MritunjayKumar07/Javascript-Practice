@@ -1,3 +1,6 @@
+01_basic_Page_01_to_07_Summary.txt is file name:-
+
+
 #1>Difference Bitween Null, Undefined & symbol (three distinct data types):-
 1>Null(Object) :- let val = ""; //absence of value
 2>Undefined(Undefined) : - let val; //not initialized any value
