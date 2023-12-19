@@ -2,7 +2,7 @@ const name = "Mritunjay Kumar"; //Declear new string
 const repoCount = 50; //Declear new string
 
 console.log(name + " " + repoCount + " Coin..."); // Not Good Way
-console.log(`${name} ${repoCount} Coin...`); //Correct Way
+console.log(`${name} ${repoCount} Coin...`); //Correct Way  (that is Template literals string)
 
 //try in browser console:-new String('Mritunjay Kumar'); //in browser console all method present related to strong
 const gameName = new String("Mritunjay Kumar"); //new use to create object. Also declear new string.

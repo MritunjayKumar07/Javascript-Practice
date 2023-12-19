@@ -1,7 +1,7 @@
-#1>Difference Bitween Null , Undefined & symbol:-
-1>Null(Object) :- let val = "";
-2>Undefined(Undefined) : - let val;
-3>Symbol  :- unique;
+#1>Difference Bitween Null, Undefined & symbol (three distinct data types):-
+1>Null(Object) :- let val = ""; //absence of value
+2>Undefined(Undefined) : - let val; //not initialized any value
+3>Symbol  :- unique;   //Each `symbol` value is guaranteed to be unique
 
 #2>Conversion:-
 1>Convert to Number :- Number() 

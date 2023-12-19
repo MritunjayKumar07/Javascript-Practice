@@ -23,7 +23,7 @@ console.log(Math.ceil(4.3)); //return :5 (top value select 4 sa thoda bhe jayada
 console.log(Math.floor(4.9)); //return :4 (lower value select 5 sa thoda bhe kam hoga to lower vlalue choose)
 console.log(Math.min(4, 8, 1, 0, 9)); //return 0 (lower value select )
 console.log(Math.random()); //return bitween 0 to 1 (ex:-0.85984596585296,0.85854585452842,0.7896541241 and etc 0.sumthing)
-console.log(Math.random() * 10); //return 5.989898qr98 (any random number under 10 degit)
+console.log(Math.random() * 10); //return 5.98989898 (any random number under 10 degit)
 const min = 10;
 const max = 20;
 console.log(Math.floor(Math.random() * (max - min + 1)) + min);
