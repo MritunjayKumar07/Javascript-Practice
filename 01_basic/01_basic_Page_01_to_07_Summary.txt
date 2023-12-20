@@ -27,6 +27,8 @@ Nots (Conversion Number):
  2+2+"2"=>42
  "2"+2+2=>222
  2+4*5/9 => Wrong Way Use this way ((2+4)*5)/9
+
+ if true = 1:-
  +true =>1
  -true =>-1
  +false =>0
@@ -84,6 +86,20 @@ Nots (Conversion Number):
 #5>MEMORY (Two Types:-Stack,Heap):-
   1>Primitive Datatype use the Stack memory.
 
+  *Primitive data types directly contain values. 
+   They are small in size and can be stored on the stack memory.
+   Stack memory is a portion of the RAM where the CPU stores 
+   primitive data types, method calls, and local variables.
+
+  *The difference between the primitive data type and the 
+   stack memory is subtle. Primitive data types are stored 
+   directly on the stack memory. When you create a variable 
+   and assign a value to it, the value is stored in the memory 
+   allocated for that variable.
+
+  *For example, in JS, if you declare an number variable, const num = 10;, 
+   the value 10 is stored in the stack memory as a 32-bit integer.
+
   Example (Memory work):
   let myYoutubeName2 = 'MritunjayKumar'
   let anotherChannel2 = myYoutubeName2
@@ -91,19 +107,31 @@ Nots (Conversion Number):
   console.log([myYoutubeName2, anotherChannel2])
   return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
    ┌─────────────────────┐
-   │                     │
+   │                   │
    ├─────────────────────┤
-   │                     │
+   │                   │
    ├─────────────────────┤
-   │   YoutubeChannel    │ <--Change Value
+   │   YoutubeChannel  │ <--Change Value
    ├─────────────────────┤
-   │   MritunjayKumar    │ <--Copy Value
+   │   MritunjayKumar  │ <--Copy Value
    ├─────────────────────┤
-   │   MritunjayKumar    │ <--Original Value
+   │   MritunjayKumar  │ <--Original Value
    └─────────────────────┘
         STACK Memory
 
   2>Non-Primitive Datatype use the Heap memory.
+
+   * Non-primitive data types are stored in heap memory.
+
+   *Heap memory is a large and flexible area of memory 
+    used for dynamic memory allocation. 
+    When a new object is created in the JS, 
+    it is allocated memory in the heap memory.
+  
+  *For example, when you create an integer array of length 10, 
+   you are creating an object that consists of an integer array reference, 
+   an integer count, and 10 integer values. Each integer is 32 bits in size, 
+   so the entire array object is approximately 400 bits (32 bits x 10 integers) in size.
 
   Example (Memory Work):
   let userOne = {
@@ -115,13 +143,13 @@ Nots (Conversion Number):
   [{ email: 'mritunjay@gmail.com', upi: 'user@yblu' },
    { email: 'mritunjay@gmail.com', upi: 'user@yblu' }]
   ┌─────────────────────┐
-  │                     │                                   ┌─────────────────────────────────────────┐     
-  ├─────────────────────┤                                   │                                         │
-  │                     │                                   │     {                                   │
-  ├─────────────────────┤                                   │         email: 'user@google.com',       │
-  │    userTwo          │ <-its also get refrence of this ->│         upi: 'user@yblu',               │
-  ├─────────────────────┤                                   │      }                                  │
-  │     userOne         │ <--      Refrence of thi       -->│                                         │
+  │                   │                                   ┌─────────────────────────────────────────┐     
+  ├─────────────────────┤                                   │                                     │
+  │                   │                                   │     {                               │
+  ├─────────────────────┤                                   │         email: 'user@google.com',   │
+  │    userTwo        │ <-its also get refrence of this ->│         upi: 'user@yblu',           │
+  ├─────────────────────┤                                   │      }                              │
+  │     userOne       │ <--      Refrence of thi       -->│                                     │
   └─────────────────────┘                                   └─────────────────────────────────────────┘
         Heap Memory                                                               
 
