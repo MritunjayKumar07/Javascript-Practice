@@ -6,22 +6,22 @@
  b>const gameName = new String("Mritunjay Kumar"); //new use to create object. Also declear new string.
  try in browser console:-new String('Mritunjay Kumar'); //in browser console all method present related to string.
  then:-
- gameName = [String: 'Mritunjay Kumar']
- gameName[0] = M
+ console.log(gameName) = [String: 'Mritunjay Kumar']
+ console.log(gameName[0]) = M
  gameName.__proto__ = return :{} //inside {} all value exist.
 
-2#>Property fro strong:
- gameName.length;
- gameName.toUpperCase();
- gameName.charAt(2);
- gameName.indexOf("t");
+2#>Some property for string:
+ gameName.length; //find length of string.
+ gameName.toUpperCase(); //convert to upper case
+ gameName.charAt(2); //find second index character
+ gameName.indexOf("t"); //find character index 
 
  const newString = "   Mritunjay    ";
  newString =     Mritunjay     
  newString.trim() = Mritunjay
 
  const url = "https://mritunjay://com%20domain%20kumar";
- url.replace("%20", "_") =  https://mritunjay://com_domain%20kumar
+ console.log(url.replace("%20", "_")) // return:-  https://mritunjay://com_domain%20kumar
  url.includes("sundar") = false
  url.includes("mritunjay") = true
  url.split("/") = [ 'https:', '', 'mritunjay:', '', 'com%20domain%20kumar' ]
@@ -34,13 +34,13 @@
  balance = 100
 
 2#> Methods:
- balance.toString().length = 3
- balance.toFixed(2) = 100.00
+  console.log(balance.toString().length) //return :- 3
+  console.log( balance.toFixed(2)) //return :-  100.00
 
 #3> MATHS Library:
  console.log(Math) = return all function in math in google console
  Math.abs(-4) = 4
- abs() function change - to + not + to -
+ //abs() function change - to + not + to -
  Math.round(4.3) = 4
  Math.ceil(4.3) = 5 (top value select 4 sa thoda bhe jayada hoga to top vlalue choose)
  Math.floor(4.9) = 4 (lower value select 5 sa thoda bhe kam hoga to lower vlalue choose)
