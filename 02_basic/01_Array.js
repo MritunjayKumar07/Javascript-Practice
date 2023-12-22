@@ -31,7 +31,7 @@ console.log(typeof arr.join()); // return :- string
 console.log("A", arr); //return :- A [ 4, 5, 6, 'mritunjay', true ]
 const myn1 = arr.slice(1, 3);
 console.log(myn1); //return:- [ 5, 6 ]
-console.log("B", arr); //return :- [ 4, 5, 6, 'mritunjay', true ]
+console.log("B", arr); //return :- B [ 4, 5, 6, 'mritunjay', true ]
 
 //Splice:- Remove elements from an Original Array
 

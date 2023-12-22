@@ -1,16 +1,16 @@
 const arr1 = ["Mritunjay", 9835678727, true];
 const arr2 = ["Kumar", 0, false];
 
-// arr1.push(arr2) //Insert arr2 inside arr1 original Existing array return :- [ 'Mritunjay', 9835678727, true, [ 'Kumar', 0, false ] ]
-// console.log(arr1)
-// console.log(arr1[3][0]); //return :- Kumar
+arr1.push(arr2) //Insert arr2 inside arr1 original Existing array return :- [ 'Mritunjay', 9835678727, true, [ 'Kumar', 0, false ] ]
+console.log(arr1)
+console.log(arr1[3][0]); //return :- Kumar
 
-// const arr = arr1.concat(arr2); // add two array and return new array(Not disturb Existing array)
-// console.log(arr)   // return :- :- [ 'Mritunjay', 9835678727, true, 'Kumar', 0, false ]
+const arr = arr1.concat(arr2); // add two array and return new array(Not disturb Existing array)
+console.log(arr)   // return :- :- [ 'Mritunjay', 9835678727, true, 'Kumar', 0, false ]
 
-// const spred_operater = [...arr1, ...arr2, ...etc_array]// add two array and return new array(Not disturb Existing array)
-// const spred_operater = [...arr1, ...arr2]// add two array and return new array(Not disturb Existing array)
-// console.log(spred_operater) // [ 'Mritunjay', 9835678727, true, 'Kumar', 0, false ]
+const spred_operater1 = [...arr1, ...arr2, ...etc_array]// add two array and return new array(Not disturb Existing array)
+const spred_operater = [...arr1, ...arr2]// add two array and return new array(Not disturb Existing array)
+console.log(spred_operater) // [ 'Mritunjay', 9835678727, true, 'Kumar', 0, false ]
 
 const another_array = [1, 2, 3, [4, 5, 6], 7, [8, 9, [10, 11]]];
 
