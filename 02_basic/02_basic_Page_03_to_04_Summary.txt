@@ -1,0 +1,5 @@
+
+#1> OBJECTS:-
+
+1> Write array two way:-
+  
