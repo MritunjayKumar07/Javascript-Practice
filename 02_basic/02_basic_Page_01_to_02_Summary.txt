@@ -1,7 +1,7 @@
 
 #1> ARRAY:-
 
-1> Write array two way:-
+1> Create array:-
   a> array2 = ["mritunjay", true, 452522];
   b> array3 = new Array(1, "mk", false);  //write in consolw to know all methos of array
 

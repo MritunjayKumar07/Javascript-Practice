@@ -1,5 +1,172 @@
+OBJECTS:- Object Declear two way (Literals, Constructer ):-
+Different Bitween Literal And Consteracter is only Singleton:
+Litrals can't make singleton, But Constructer make Singleton.
 
-#1> OBJECTS:-
+new Object();// All method when use in console.
 
-1> Write array two way:-
+##01.> Create array::
+
+  a> Object made by Singleton
+    const TinderObject = new Object(); //This is Singleton Object
+
+  b>constructor wise:
+  function vehicle(name,maker,engine){
+    this.name = name;  
+    this.maker = maker;
+    this.engine = engine;
+  }
+  let car  = new vehicle('GT','BMW','1998cc');
+
+  c>literals wizw:
+  let car = {
+    name : 'GT',
+    maker : 'BMW',
+    engine : '1998cc'
+  };
+
+  d>Using  Object.create() :
+  Object.create({
+    isStudying : false,
+    printIntroduction : function(){
+        console.log(`My name is ${this.name}. Am I studying?: ${this.isStudying}`);
+    }
+  });
+  e>Using es6 classes:
+  class Vehicle {
+  constructor(name, maker, engine) {
+    this.name = name;
+    this.maker =  maker;
+    this.engine = engine;
+    }
+  }
+  let car1 = new Vehicle('GT', 'BMW', '1998cc');
+
+
+##02.> Literal::
+
+#1>Object literals:-In programming, an object literal is a notation for creating an object using a set of key-value pairs.
+   const JsUser = {}; //Create empty Object And Non Singleton Object
+   const JsUsers = {  //Create Object with Key and value
+    name: "Mritunjay", 
+    age: 18,
+    "full name": "Mritunjay Kumar", //Alwase Object treat all Key as a String.
+    location: "Jaipur",
+    email: "mritunjay@gmail.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"],
+    fullName: function() {
+      return this.firstName + ' ' + this.lastName;
+    } 
+   }
+   //person is an object literal with properties firstName, lastName, age, and a method fullName.
+   
+   JsUsers.email; //Get data from Object
+   JsUsers."full name"; or Use JsUsers.full name; //Give Error
+   JsUsers["full name"]; //Use Another way Becouse JsUsers.full name not posible thats way we use another way JsUsers[""full name""]
+
+#2>use Symbol key inside Object:- Using [Key]
+  const symbolKey = Symbol("ID");
+  const user = {
+    name: "Mritunjay",
+    symbolKey: "User123", //not Work This Way symbolKey Kay is a type of string.
+    age: 18,
+  };
+  const user1 = {
+    name: "Mritunjay",
+    symbolKey: "Kumar", 
+    [symbolKey]: "User123", //Work This Way symbolKey Kay is a type of Symbol.
+    age: 18,
+  };
+  user[symbolKey]; // return :- undefined
+  user1[symbolKey];//Axcess Symbol return :- User123 
+  user1["symbolKey"];// return :- Kumar
+
+#3>Object freeze:- (No One can change the value of in object.)
+  user1; //Return :- { name: 'Mritunjay', symbolKey: 'User123', age: 18, [Symbol(ID)]: 'User123'}
+  user1.email = "Kumar@gmail.com";  //Insert Date in Object
+  user1; // Return :-{ name: 'Mritunjay', symbolKey: 'User123',age: 18, email: 'Kumar@gmail.com', [Symbol(ID)]: 'User123'}
+
+  Object.freeze(user1); // Use to freeze the object (No One can change the value of in object.)
+  Object.isFrozen(user1); // Cheak Object if freez or not return :- true
+
+  user1.email = "Mritunjay@gmail.com";
+  user1; //Return :- { name: 'Mritunjay', symbolKey: 'User123', age: 18, email: 'Kumar@gmail.com', [Symbol(ID)]: 'User123'}
+
+  const UnFreezonObject = Object.assign({}, user1); // UsFreez the Object.
+
+  UnFreezonObject.greeting = function () {
+    console.log("Hello Function...");
+  };
+
+  UnFreezonObject.greetingTwo = function () {
+    console.log(`Hello Function... ${this.name}`); // this is use to get same object data (it's refrence of same object).
+  };
+
+  console.log(UnFreezonObject.greeting); // return :- [Function (anonymous)]
+  console.log(UnFreezonObject.greeting()); //return :- Hello Function...
+  console.log(UnFreezonObject.greetingTwo()); //return :- Hello Function... Mritunjay
+
+
+//Object Literals end;
+
+##03.> Singleton or Consteracter::
+
+ a>Singleton or none Singleton:-
+   const Object1 = new Object() // This is Singleton Object
+   const Object2 = {}; // This is Non Singleton Object
+
+ b> Some Property:-
+  const TinderObject = {}; 
+
+  TinderObject.id = "123abc";
+  TinderObject.name = "Mritunjay";
+  TinderObject.isLoggedIn = false;
+
+  Object.keys(TinderObject); //return:- [ 'id', 'name', 'isLoggedIn' ]
+  Object.values(TinderObject); //return:- [ '123abc', 'Mritunjay', false ]
+  Object.entries(TinderObject); //return:- [[ 'id', '123abc' ],[ 'name', 'Mritunjay' ],[ 'isLoggedIn', false ]]
+  TinderObject.hasOwnProperty("name"); //hasOwnProperty() this property cheak is key avelable or not. return:- true
+
+  const regularUser = {
+    email: "mk@mk.com",
+    fullName: {
+        userfullname: {
+          firstName: "Mritunjay",
+          lastName: "Kumar",
+        },
+      },
+  };
+
+  regularUser.fullName.userfullname; // return :-{ firstName: 'Mritunjay', lastName: 'Kumar' }
+  regularUser.fullName.userfullname.firstName; // return :-Mritunjay
+
+  const Obj1 = { 1: "a", 2: "b" };
+  const Obj2 = { 3: "c", 4: "b", 5: "e" };
+  const obj3 = { Obj1, Obj2 };
+  obj3; // return :- {Obj1: { '1': 'a', '2': 'b' },Obj2: { '3': 'c', '4': 'b', '5': 'e' }}
+
+  const obj4 = Object.assign(Obj1, Obj2);
+  const obj5 = Object.assign({}, Obj1, Obj2); // Correct Way
+  const obj6 = { ...Obj1, ...Obj2 }; // Correct Way
+  obj4; // return :- { '1': 'a', '2': 'b', '3': 'c', '4': 'b', '5': 'e' }
+  obj5; // return :- { '1': 'a', '2': 'b', '3': 'c', '4': 'b', '5': 'e' }
+  obj6; // return :- { '1': 'a', '2': 'b', '3': 'c', '4': 'b', '5': 'e' }
+
+ c>Come Data From Data Base (Handle):-
+  const DataBaseUser = [
+    { id: 1, email: "mk@gmail.com" },
+    { id: 2, email: "mk1@gmail.com" },
+    { id: 3, email: "mk2@gmail.com" },
+    { id: 4, email: "mk3@gmail.com" },
+    { id: 5, email: "mk4@gmail.com" },
+  ];
+  console.log(DataBaseUser[1].email);
+ 
+ d>Object Destructuring:-
+  let person = {
+   name: "John Doe",
+   age: 30,
+   cityName: "New York",
+  };
+  const { cityName: city, age, name } = person; // 2th Way (Correct Way) (cityName: city, Change the variable city = cityName)
   
