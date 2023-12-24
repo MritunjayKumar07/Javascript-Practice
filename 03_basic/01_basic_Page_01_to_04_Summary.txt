@@ -1,0 +1,85 @@
+##01:>Function:-
+  
+  a>Basic of functions:- 
+    function saymayname() {
+      console.log("Mritunjay");
+    }
+    .> functon => KeyWord of the function, 
+    .> saymayname => Name of the function  , 
+    .> () => Syntex of the function  , 
+    .> {} => Scop of the function,
+    .> { console.log("Mritunjay") } => Defination of the function in side the scope,
+  
+    saymayname(); 
+    .> saymayname(); => Exicut the function.
+  
+    const fun = saymayname;
+    .> fun => Take saymayname function refrence
+  
+    fun();
+    .> fun(); => Exicut the function.
+  
+  b>Parameters & Arguments:-
+    function addTwoNumbers(number1, number2) {  //number1, number2 is taking Parameters
+      console.log(number1 + number2);
+      console.log("Hello..."); //Not Print This Return ka bad koi valur return nhi kerta hy.
+    }
+    addTwoNumbers(5, 7); //or you pass null or undefine any things any type of value.
+    .>5 And 6 is Arguments pass
+
+    const result = addTwoNumbers(3, 5);
+    console.log("Result:", result); //return :-  8 and next Result: undefined
+    .>Ya function kuch return nhi ker raha hy, only Console ker raha thays way is print, 
+    console not return any things that way Result: undefined.
+    .>One Scope take only one return, If multiple scope in side scope then use Mritunjay return in each scope.
+    
+    function addTwoNumbers2(number1, number2) {
+      return number1 + number2;
+    }
+    const result2 = addTwoNumbers2(3, 5);
+    console.log("Result:", result2); //return :-  Result: 8 
+    .>if you return then show return
+
+    function loginUserMessage(userName) {
+      return `${userName} just logged in...`;
+    }
+    loginUserMessage("Mritunjay"); //Not Return any things, Becouse Only return not print any things.
+    console.log(loginUserMessage("Mritunjay")); // return :- Mritunjay just logged in...    Becouse Return Print By Console
+    console.log(loginUserMessage()); // return :- Undefined
+
+    function loginDefoult(userName = "Kumar") { //Use ByDefoult value is Kumar
+      return `${userName} just logged in...`;
+    }
+    console.log(loginDefoult()); // return :- Kumar just logged in...
+    console.log(loginDefoult("Mritunjay")); // return :- Mritunjay just logged in...
+    
+
+    //Pass multiple Parameters and multiple Arguments:
+    function calculate(...num1) {
+      //... this is rest operater (... define based on use case it's also spred operater or rest operater.)
+      return num1;
+    }
+    or
+    function calculate(val1, val2, ...num1) {
+      return num1;
+    }
+
+    console.log(calculate(200, 100, 500, 2000)); // return :- [ 200, 100, 500, 2000 ]
+
+    //Pass Object in functions:
+    const user = {
+      userName: "Mritunjay",
+      price: 90,
+    };
+    function handleObject(anyObject) {
+      console.log(
+        `UserName if ${anyObject.userName} & Price is ${anyObject.price}.`
+      );
+    }
+    handleObject(user); // return :- UserName if Mritunjay & Price is 90.
+
+    //Pass Array in functions:
+    function handleArray(anyArray) {
+      return anyArray[0];
+    }
+    console.log(handleArray([200, 300, 400, 500]));
