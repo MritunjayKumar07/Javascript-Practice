@@ -40,7 +40,8 @@ function functionThis() {
   console.log(this);
 }
 
-functionThis(); //return use method and function for function
+functionThis(); 
+//return use method and function for function
 /*Return :- <ref *1> Object [global] {
     global: [Circular *1],
     clearImmediate: [Function: clearImmediate],

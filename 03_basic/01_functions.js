@@ -10,11 +10,12 @@ function saymayname() {
   console.log("Y");
 }
 
-/*"functon" is keyWord of function, function name "saymayname", function Syntex "()",
+/*"functon" is keyWord of function, function name "saymayname", function Syntex "()", function scopt "{}",
 "{ console.log("M")console.log("R")console.log("I")console.log("T")console.log("U")console.log("N")console.log("J")console.log("A")console.log("Y")}" Function Defination */
 
 saymayname(); // Function Exicute
 // saymayname // Function refrence
+
 const fun = saymayname;
 fun();
 
