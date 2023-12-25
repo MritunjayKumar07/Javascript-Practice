@@ -41,7 +41,7 @@ function functionThis() {
 }
 
 functionThis(); 
-//return use method and function for function
+//return use method and function for function (.this) use in google console.
 /*Return :- <ref *1> Object [global] {
     global: [Circular *1],
     clearImmediate: [Function: clearImmediate],

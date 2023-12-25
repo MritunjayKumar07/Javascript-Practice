@@ -17,7 +17,9 @@ const addTwo3 = () => {
 }; //Implicet return
 console.log(addTwo3()); //return :-undefine
 
-const addTwo4 = () => ({ useName: "Mritunjay" }); //Implicet return
+const addTwo4 = () => ({
+  useName: "Mritunjay",
+}); //Implicet return
 console.log(addTwo4()); //return :-{ useName: 'Mritunjay' }
 
 //Immediately invoked function Expressions(IIFE) or Named IIFE:-
@@ -36,7 +38,7 @@ function chai() {
 chai(); //Ya Bhe immediately run kia But Global scope ka polution( global variable or global decleriation) ko kysa roka.
 
 (() => {
-  //This function is unNamed IIFE becouse IIFE function ka name nhi hy.
+  //This function is UnNamed IIFE becouse IIFE function ka name nhi hy.
   console.log(`DB Connect Two.`);
 })(); //IIFE function Output:- DB Connect Two.
 

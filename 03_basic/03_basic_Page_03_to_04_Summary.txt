@@ -1,0 +1,74 @@
+##01:>Arrow Function:-
+  a>const user2 = {
+      userName: "Mritunjay Kumar",
+      price: 999,
+      welcomeMessage: function () {
+        console.log(`${this.userName} get discount Rs ${this.price}`); //'this' is get the current context ant the current contect is parents scope.
+        console.log(this);
+      },
+    };
+    user.welcomeMessage // nothing return :- Becouse not function not return any thing only console use.
+    user2.welcomeMessage(); //return :-Mritunjay Kumar get discount Rs 999 { userName: 'Mritunjay Kumar', price: 999, welcomeMessage: [Function: welcomeMessage]}
+    user2.userName = "Amit";
+    user2.welcomeMessage(); //return :-Amit get discount Rs 999 {  userName: 'Amit',  price: 999,  welcomeMessage: [Function: welcomeMessage]}
+  
+    console.log(this); //return :- {} 
+    -We use in node that it's give {} 
+    -When we use in browser then return browser global object method, value and etc.
+    -In browser global object is windows.
+  
+  b>'this' KeyWord in function:-
+    -'this' KeyWord Work Only Object not in Function return:- undefined {}
+
+    const functionThis1 = () => {
+      let userName = "Mritunjay";
+      console.log(this.userName);
+      console.log(this);
+    };
+    functionThis1(); //return : undefined
+
+  c>Exceplicet or Implicet:-
+    -Not use return keyword in inside the Implicet return.
+    -If you want to use parentheses or Curly brackets or middle brackets  '{}' then use in side the  smoll brackets '()'.
+    -Use the return keyword in inside the Exceplicet return.
+
+    const addTwo1 = (num1, num2) => {
+      return num1 + num2; 
+    }; //Exceplicet Return
+
+    const addTwo2 = (num1, num2) => num1 + num2; //Implicet return
+
+    const addTwo3 = () => {
+      useName: "Mritunjay";
+    }; //Implicet return
+
+    const addTwo4 = (num1, num2) => ({
+        num1 + num2
+    });//Implicet return
+
+    console.log(addTwo1(2, 5)); //return :-7
+    console.log(addTwo2(2, 5)); //return :-7
+    console.log(addTwo3()); //return :-undefine
+    console.log(addTwo4()); //return :-{ useName: 'Mritunjay' }
+
+  d>Immediately invoked function Expressions(IIFE) or Named IIFE or UnNamed functions:-
+    - IIFE function use to run Immediately.
+    - USe for protect the Global Scop polution (variabe,decleriation and etc).
+    - The end of IIFE functions use semicollum (`;`) to end and stop of the IIFE function, 
+      another wise not run any thing after the IIFE function and create Error,
+      It's MENDETRY.
+
+    function chai() {
+     console.log(`DB Connect One.`);
+    }
+    chai();  //That function also run immediately, but not protect the Global Scop polution.
+    
+    (function chaii(){
+      console.log("DB Code Block);
+    })(); // That is IIFE function., SEMICOLLUM(;) IS MENDETRY
+
+    or
+
+    (()=>{
+      console.log("DB Code Block);
+    })(); // That is IIFE function., SEMICOLLUM(;) IS MENDETRY
