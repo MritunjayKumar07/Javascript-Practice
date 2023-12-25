@@ -83,3 +83,45 @@
       return anyArray[0];
     }
     console.log(handleArray([200, 300, 400, 500]));
+
+##02:>Scope:-
+- Local Scope: A variable which can be accessed only in a particular block of code called local scope.
+- Global Scope: A variable which can be accessed anywhere in the program called global scope.
+- Block Scope: It’s an advanced feature introduced by ES6 that allows us to declare variables inside blocks such as if statements, for loops.
+
+In JavaScript there are two types of Scopes:
+- **Local Scope**: It is created by any block of code such as for loop, while loop, if statement etc.
+- **Global Scope**: If no other scope exists then it becomes the global scope. Variables declared outside any function are available throughout the entire
+
+
+ a>{} curly bracket is a scope when come with any function or if else.
+
+  var c1 = 300;
+  if (true) {
+    let a1 = 10;
+    const b1 = 20;
+    var c1 = 30;
+  }
+  a1 // return :- ReferenceError: a1 is not defined
+  b1 // return :- ReferenceError: b1 is not defined
+  c1; // return :- 30
+  -Any variable declear in scope Called Block Scope.
+  -Any Variable declear in outSide of function called Global Scope.
+
+  let a2 = 150;
+  const b2 = 250;
+  if (true) {
+    let a2 = 110;
+    const b2 = 210;
+    console.log([a2, b2]); // return :- [ 110, 210 ]
+  }
+  console.log([a2, b2]); // return :- [ 150, 250 ]
+
+  -Browser Scope or Node Scope working differnent to each other.
+
+  b>Initialization:-
+
+    console.log(AddTwo(7)); // return :- RefrenceError: Cannot access 'AddTwo' before initialization.
+    const AddTwo = function (num) {
+      return num + 1;
+    };
