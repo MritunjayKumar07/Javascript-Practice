@@ -1,0 +1,1 @@
+//-> If you write in windown :- console.log(document) then return every things from windows.
