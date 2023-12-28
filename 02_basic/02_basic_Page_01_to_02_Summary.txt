@@ -5,7 +5,7 @@
   a> array2 = ["mritunjay", true, 452522];
   b> array3 = new Array(1, "mk", false);  //write in consolw to know all methos of array
 
-2> Some Method of Array:-
+2> Some Method of Array:- (In Method paranthises is use like:- arr.pop() then pop is method and () that is paranthises)
   arr = [...array1, ...array2]; // Murj two or more array: => output :- ['mritunjay', true, 452522, 1, "mk", false ] 
   arr[3]; //Get Particuler value by index id from array: => output:-1  
   arr.push("Rahul"); //Add element on lase in array: => Output:-['mritunjay', true, 452522,  1, "mk", false, 'Rahul' ]
