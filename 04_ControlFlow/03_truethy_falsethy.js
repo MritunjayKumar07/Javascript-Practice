@@ -32,8 +32,8 @@ false == '' > true
 
 //Nullish Coalescing Operator (??) :null undefined
 /*??:-Useful in situations where we want to provide a default value
-for a variable that may be null or undefined.(it mins if data come from database null or undefined
-then retutn defoult value.)*/
+for a variable that may be null or undefined.(it mins if data come 
+from database null or undefined then retutn defoult value.)*/
 //syntex:- val = if(null || undefined) hy to defoult value nahi to real value ?? defoult value (if data comes from database null or undefined)
 
 let userActive = false;

@@ -1,0 +1,100 @@
+#01> if, else if, else:-
+
+  -> condition:- <,>,<=,>=,==,=== (cheak type),!=, !(negative cheak), &&, ||
+  const isUserloginIn = 3;
+  const isUserloginIn2 = 6;
+  if (isUserloginIn > 1) {console.log("if");}
+  else if (isUserloginIn > 3) {console.log("else if");} 
+  else { console.log("else");}
+  
+  // if (true) console.log("if"); //Wron Way
+  
+  if (isUserloginIn === 3 && isUserloginIn2 === 6) {
+    console.log("if with and operator &&");
+  } else if (isUserloginIn === 3 || isUserloginIn2 === 6 || true) {
+    console.log("if with or operator ||");
+  }
+
+#02> Switch Case:-
+  
+  const month = 3;
+  switch (month) {
+    case 1:
+      console.log("Jan");
+      break;
+    case 2:
+      console.log("Feb");
+      break;
+    case 3:
+      console.log("Mar");
+      break;
+    default:
+      console.log("Invalid Month");
+      break;
+  }
+  ->break :- By defoult in switch when key match with case then whole
+    code run . If you not use 'break;'  then next whole code run without matching
+    case.
+
+#03> truethy and falsethy:-
+
+  ->falsethy Values:- flase, 0, -0(false), 0n (BigIn?t), null, undefined, NaN
+  ->truethy Values:- 'false', "0", " ", [], {}, function(){},
+
+  ->Cheak empty or not:-
+    -> Cheak is not any value in side variable:-
+      const userEmail = "";
+      if (userEmail) {
+        console.log("Got User Name");
+      } else {
+        console.log("Do Not Got User Eamil"); // this return
+      }
+    ->Cheak Array is empty or not:-
+      const Cheakarr = [];
+      if (Cheakarr.length > 0) {
+        console.log("Cheakarr is not empty");
+      } else if (Cheakarr.length === 0) {
+        console.log("Cheakarr is empty");
+      }
+    ->Cheak Object is empty or not:-
+      const CheakObj = {};
+      if (Object.keys(CheakObj).length > 0) {
+        console.log("CheakObj is not empty");
+      } else if (Object.keys(CheakObj).length === 0) {
+        console.log("CheakObj is empty");
+      }
+  
+  ->Nullish Coalescing Operator (??):-
+
+    ->It returns the first operand if it is not Null or Undefined otherwise it returns the second operand.
+    ->??:-Useful in situations where we want to provide a default value
+      for a variable that may be null or undefined.(it mins if data come 
+      from database null or undefined then retutn defoult value.)
+    ->syntex:- null || undefined hy to defoult value, nahi to real 
+      value ?? defoult value (if data comes from database null or undefined)
+
+    let userActive = false;
+    let defaultActive = true;
+    let isActive = userActive ?? defaultActive;
+    console.log(isActive); // Output: true
+
+    let user = null;
+    let defaultUser = "Anonymous";
+    let username = user ?? defaultUser;
+    console.log(username); // Output: Anonymous
+
+    let vall;
+    vall = 5 ?? 10;
+    console.log(vall); //return 5
+
+    console.log(null ?? 15); // Return: 15
+    console.log(undefined ?? 25); // Return: 25
+    console.log(50 ?? 25); // Return: 50
+  
+  ->Terniary operator (same as it elase):-
+
+    ->syntex:- condition ? true : false 
+    
+    console.log(5 > 2 ? 5 : 2); // Return: 5
+    console.log(true ? 5 : 2); // Return: 5
+    console.log(false ? 5 : 2); // Return: 2
