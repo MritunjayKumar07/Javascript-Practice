@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create elements in side elements.</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    //Add Value:-
+    const addLanguage = (language) => {
+      const li = document.createElement("li");
+      li.innerHTML = `${language}`; // innerHTML use kerna pa pura document traversing hota hy.
+      //Big project pa innerHTML use na ker ka use kera appendChild()
+
+      const ul = document.querySelector(".language");
+      ul.appendChild(li)
+    };
+
+    addLanguage("Python");
+    addLanguage("c");
+
+    //When use in big project Optmize way:- use DSA Like this:-
+    
+    const addOptimizeLanguage=(language)=>{
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(language));
+        document.querySelector(".language").appendChild(li);
+    }
+    addOptimizeLanguage('go lang');
+
+    //Edit Value:-
+    const selectLang = document.querySelector("li:nth-child(2)");
+
+    selectLang.innerHTML = "change by HTML";
+    //or
+    selectLang.outerHTML = `<li>change</li>`;
+    //or
+    selectLang.textContent = "Mritunjay";
+    //or
+    const newli = document.createElement('li');
+    newli.textContent = "kumar";
+    selectLang.replaceWith(newli);
+   
+
+    //Remove elements:-
+    const removeli = document.querySelector("li:last-child");
+    removeli.remove();
+    
+
+
+  </script>
+</html>

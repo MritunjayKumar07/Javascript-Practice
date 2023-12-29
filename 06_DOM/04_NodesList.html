@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeList</title>
+  </head>
+  <body></body>
+  <script>
+    //Create div elements:-
+    const h1 = document.createElement("h1"); //etc you want to create.
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "main";
+    div.id = "myId";
+    //or (replace older id.)
+    div.id = Math.round(Math.random() * 10 + 1); // return :- <div class="main" id="8"></div>
+    //set Custome Attribute:-
+    div.setAttribute("title", "generate title"); //return :-<div class="main" id="9" title="generate title"></div>
+    div.style.background = "#212121";
+    div.style.color = "#fff";
+
+    //Add text in div:-
+    div.innerText = `Frome Inner div`;
+    div.innerHTML = `<h3>Hello Mritunjay Kumar</h3>`; //replace all thing in inside div. 
+    const textNode = document.createTextNode("Hello From Github."); //Only work text not ant child.
+    div.appendChild(textNode);
+    
+    //Add Element on Page:-
+    document.body.appendChild(div);
+
+  </script>
+</html>

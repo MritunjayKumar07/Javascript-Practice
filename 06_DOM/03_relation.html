@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Time 1:00:00
-</body>
+  </head>
+  <body>
+    <div class="parents">
+
+      <div class="days">Sunday</div>
+      <div class="days">Monday</div>
+      <div class="days">Tuesday</div>
+      <div class="days">Wednesday</div>
+    </div>
+  </body>
+  <script>
+    //select childern or parents.
+    const parents = document.querySelector(".parents");
+    console.log(parents); //return all parents container :-<div class="parents">…</div>
+    console.log(parents.children); //retun:-HTMLCollection(4) [div.days, div.days, div.days, div.days]
+    console.log(parents.children[1].innerHTML); //return :- Monday
+
+    //Get all children value in loop:-
+    for (let index = 0; index < parents.children.length; index++) {
+      const element = parents.children[index];
+      console.log(element); // return all:-child div
+    }
+    //Add Style:-
+    parents.children[1].style.color = "orange";
+
+    console.log(`---------------------------------------------`);
+
+    //Propertie's:-
+    //Get Parents to Child:-
+    console.log(parents.firstElementChild); //return 1th child element
+    console.log(parents.lastElementChild); //return last child element
+
+    //Get Child to parents:-
+    const days = document.querySelector(".days");
+    console.log(days); //return :-<div class="days">Sunday</div>
+    console.log(days.parentElement); //return :-<div class="parents">…</div>
+
+    //Get next Elements:-
+    console.log(days.nextElementSibling); //return :-<div class="days" style="color: orange;">Monday</div>
+    
+    //IMPORTANT :- childNodes  (whole react work on childNodes).
+    console.log("NODES: ", parents.childNodes);
+    /*return:-
+    NODES: NodeList(9) [text, div.days, text, div.days, text, div.days, text, div.days, text]
+    0: text     //line break show (0 text element mutlub yaha koi elements nhi hy hum rakh sakata hy.).
+    1:div.days
+    2:text      //line break show (0 text element mutlub yaha koi elements nhi hy hum rakh sakata hy.).
+    3:div.days
+    4:text      //line break show (0 text element mutlub yaha koi elements nhi hy hum rakh sakata hy.).
+    5:div.days
+    6:text      //line break show (0 text element mutlub yaha koi elements nhi hy hum rakh sakata hy.).
+    7:div.days
+    8:text      //line break show (0 text element mutlub yaha koi elements nhi hy hum rakh sakata hy.).
+    length:9
+    [[Prototype]]:NodeList
+    */
+  </script>
 </html>
