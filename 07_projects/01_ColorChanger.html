@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Changer</title>
+  </head>
+  <style>
+    body {
+      box-sizing: border-box;
+      width: 10 0vw;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      place-items: center;
+      gap: 100px;
+    }
+    h1{
+        color: gray;
+        font-family: sans-serif;
+    }
+    button {
+      width: 150px;
+      height: 150px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <h1>Color Changer:</h1>
+    <div class="buttons">
+      <button class="#000000">#000000</button>
+      <button class="#FFFFFF">#FFFFFF</button>
+      <button class="#FFA384">#FFA384</button>
+      <button class="#FF0000">#FF0000</button>
+    </div>
+  </body>
+  <script>
+    const buttons = document.querySelectorAll("button");
+    const body = document.querySelector("body");
+    buttons.forEach((but) => {
+      but.addEventListener("click", (e) => {
+        // body.style.background = but.className;
+        //or
+        if(e.target.className === but.className){
+            body.style.background = but.className;
+        }
+      });
+    });
+  </script>
+</html>
