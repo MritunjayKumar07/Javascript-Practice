@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock !</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        place-items: center;
+        align-items: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+      p {
+        font-size: 1.2em;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #000;
+        background: orange;
+        border-radius: 5px;
+        padding: 8px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Your local time</h2>
+    <p id="time">hh:mm:ss</p>
+  </body>
+  <script>
+    const time = document.getElementById("time");
+    console.log();
+    setInterval(() => {
+      //Most IMP for Intriview
+      const localTime = new Date();
+      time.innerHTML = localTime.toLocaleTimeString(undefined, {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      });
+      console.log(localTime.toLocaleTimeString(undefined,{hour12: true}))
+    }, 1000);
+  </script>
+</html>

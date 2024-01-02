@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number !</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        place-items: center;
+        background: #000;
+        color: #fff;
+        width: auto;
+        height: 100vh;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-family: sans-serif;
+        grid-area: 15px;
+      }
+      form {
+        border: 2px solid #ffff;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 32px;
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: grey;
+      }
+      button {
+        padding: 8px 10px;
+        border: none;
+        border-radius: 5px;
+        background: goldenrod;
+        color: #000;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+      }
+      p strong {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Guess the number bitween 1 to 100.</h2>
+    <form>
+      <input
+        type="text"
+        name="GuessNumber"
+        inputmode="numeric"
+        placeholder="gased number"
+      />
+      <button>Submit</button>
+    </form>
+    <p><strong>Preview Guess</strong>:<strong class="Preview"></strong></p>
+    <p>
+      <strong>Guess Remaining</strong>:<strong class="Remaining">10</strong>
+    </p>
+    <button id="refresh">Refresh</button>
+  </body>
+  <script>
+    let GuessAray = [];
+    const randomNumber = Math.floor(Math.random() * 100);
+    const form = document.querySelector("form");
+    const storeForm = form.innerHTML;
+    const refresh = document.querySelector("#refresh");
+    const Preview = document.querySelector(".Preview");
+    const Remaining = document.querySelector(".Remaining");
+
+    refresh.addEventListener("click", (e) => {
+      GuessAray = [];
+      Preview.innerHTML = " ";
+      Remaining.innerHTML = "10";
+      form.innerHTML = storeForm;
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let input = document.querySelector("input");
+      input = Number(input.value);
+      if (input > 100 || input < 1) {
+        alert("Please number enter bitween 1 to 100!");
+      } else {
+        Preview.innerHTML += `${input}, `;
+        Remaining.innerHTML = 10 - (GuessAray.length + 1);
+        GuessAray.push(input);
+        if (randomNumber === input) {
+          form.innerHTML = `<h2>Congratulation! You guessed it right, You win!<h2>`;
+        } else if (randomNumber < input) {
+          alert("Your guess is too high! Try again.");
+        } else if (randomNumber > input) {
+          alert("Your guess is too low! Try again.");
+        }
+      }
+
+      if (GuessAray.length > 9) {
+        form.innerHTML = `<h2>You complit the game!<h2>`;
+      }
+    });
+  </script>
+</html>
