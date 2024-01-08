@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Change the background colour after 1 second continuesly.</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const startBtn = document.getElementById("start");
+    const stopBtn = document.getElementById("stop");
+    let body = document.querySelector("body");
+
+    const generateRandomColor = () => {
+      const colorCode = "0123456789ABCDEF";
+      let color = "#";
+      for (let index = 0; index <= 5; index++) {
+        color += colorCode[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    };
+
+    let interval;
+
+    startBtn.addEventListener("click", () => {
+      if (!interval) {
+        //cheak if null Better code to write
+        interval = setInterval(() => {
+          body.style.backgroundColor = generateRandomColor();
+        }, 1000); // Change every 1 sec
+      }
+    });
+
+    stopBtn.addEventListener("click", () => {
+      clearInterval(interval);
+      interval = null; //Profoconal way Agar kam nhi hy to hata do
+    });
+  </script>
+</html>

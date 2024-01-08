@@ -1,0 +1,216 @@
+ITERATION
+
+#01> for loop:-
+  -> Syntex:
+  for (let index = 0; index < 10; index++) {
+    console.log(index);
+  }
+  -> Insert value > Cheak condition > Run Boloc of code {} > index++
+
+  for (let i = 0; i < 10; i++) {
+    console.log(`Outer value ${i}:`);
+    for (let j = 0; j < 10; j++) {
+      console.log(`Inner value ${j}`);
+    }
+  }
+
+  for (let i = 0; i < 10; i++) {
+    if (i == 5) {
+      console.log("5 is detected");
+      break; // it will stop the loop
+    }
+    console.log(`${i} is best`);
+  }
+
+  ->break and continue keyword:-
+    ->continue - it will continue the inner loop
+    ->break; - it will stop the outer loop
+
+
+#02> while loop:-
+  -> Syntex
+  let arr = ["mk", "sk", "pk"];
+  let j = 0;
+  while (j < arr.length) {
+    console.log(arr[j]);
+    j = j + 1;
+  }
+  
+
+#03> do while loop:-
+  -> 1th time run true or false next all thime cheak trur or false if trur then run.
+  let d = 0;
+  do {
+    console.log(`do while loop :- ${d}`);
+    d = d + 1;
+  } while (d <= 10);
+
+
+#04> for of loop:-
+  ->Syntex
+  let data = ["mk", "sk", "pk"];
+  for (let value of data) {
+    console.log(value);
+  } //return :- mk sk pk
+  
+  -> DeStructring the data and return one by one in inside the value.
+  -> You can use any type of data like array, boject, array of an object and etc.
+
+  let obj = [{ 1: "mk" }, { 2: "sk" }, { 3: "pk" }];
+  for (let value of obj) {
+    console.log(value);
+  } //return :-{ '1': 'mk' }{ '2': 'sk' }{ '3': 'pk' }
+
+  let val = "Mritunjay";
+  for (const i of val) {
+    console.log(i);
+  } //return :- M r i t u n j a y
+
+
+#05> for in loop:-
+  ->Iterate return all index one by one from data.
+
+  ->Syntex
+  for (let key in obj) {
+    console.log(key);
+  } //return :- 0 1 2
+
+  for (let key in arr) {
+    console.log(key);
+  } //return :- 0 1 2
+
+  for (const i in val) {
+    console.log(i);
+  } //return :- 0 1 2 3 4 5 6 7 8
+
+
+#06> map loop:-
+  ->Not store dublicatew value if you set duplicate value then  return time return 
+    one first of dublicatew key with value.
+  ->Its take key and value.
+
+  ->Syntex Create map
+  const map = new Map();
+
+  -> Set Key and value
+  map.set("IN", "India");
+
+  -> get value by key
+  map.get("IN")
+
+  ->get both key value
+  for (const key of map) {
+    console.log(key);
+  }
+
+  or
+
+  ->DeStructring the map
+  for (const [key, value] of map) {
+    console.log(`${key} and ${value},`);
+  }
+  -> Remember Iterate like [key, value] only applicable with map. 
+
+  -> Remember Some points.
+  const myObj = {
+    name: "Mritunjay",
+    age: 25,
+    city: "Mumbai",
+  };
+
+  ->Not use like that with object
+  for (const [key, value] of myObj) {
+    console.log(`${key} and ${value}`)
+  } // return :- error myObj not iterable
+
+  ->Use by this with object
+  for (const key in myObj) {
+    console.log(key);
+  } // return :- name age city
+
+  -> get both key and value:-
+  for (const key in myObj) {
+    console.log(`${key} shortcut if for ${myObj[key]} ,`);
+  } // return :- name shortcut if for Mritunjay , age shortcut if for 25 , city shortcut if for Mumbai ,
+
+  -> Use array
+  const inArr = ["mk", "pl", "ki", "ok"];
+  for (const key in inArr) {
+    console.log(`${key} value :- ${inArr[key]}, `);
+  } //return :-0 value :- mk 1, value :- pl, 2 value :- ki, 3 value :- ok,
+
+  ->use for in in map
+  for (const key in map) {
+    console.log(key);
+  } // return :- empty 
+  ->Becouse in map not get dat using index avelable for gating the data only using key.
+
+#07> forEach loop:-
+  -> take 3 Argument
+  ->callbackfun ka matlab ak function use hoga andar ma bina koi name ka function
+
+  const coding = ["JS", "Ruby", "Python", "HTML", "C", "C++", "cpp"];
+  coding.forEach(function (val) {
+    console.log(val);
+  }); //Return:- JS Ruby Python HTML C C++ cpp
+
+  Or
+
+  coding.forEach((item) => {
+    console.log(item);
+  }); //Return:- JS Ruby Python HTML C C++ cpp
+
+  Or
+
+  function PrintName(params) {
+    console.log(params);
+  }
+  coding.forEach(PrintName); //Return:- JS Ruby Python HTML C C++ cpp
+
+  ->3 Argument take
+  coding.forEach((item, index, arr) => {
+  console.log(item, index, arr);
+  });
+  /*Return:- 
+  JS 0 [ 'JS', 'Ruby', 'Python', 'HTML', 'C', 'C++', 'cpp']
+  Ruby 1 [ 'JS', 'Ruby', 'Python', 'HTML', 'C', 'C++', 'cpp']
+  Python 2 [ 'JS', 'Ruby', 'Python', 'HTML', 'C', 'C++', 'cpp']
+  HTML 3 [ 'JS', 'Ruby', 'Python', 'HTML', 'C', 'C++', 'cpp']
+  C 4 [ 'JS', 'Ruby', 'Python', 'HTML', 'C', 'C++', 'cpp']
+  C++ 5 [ 'JS', 'Ruby', 'Python', 'HTML', 'C', 'C++', 'cpp']
+  cpp 6 [ 'JS', 'Ruby', 'Python', 'HTML', 'C', 'C++', 'cpp']*/
+
+  const myCoding = [
+    {
+      languageName: "JavaScript",
+      languageFileName: "JS",
+    },
+    {
+      languageName: "java",
+      languageFileName: "java",
+    },
+    {
+      languageName: "python",
+      languageFileName: "py",
+    },
+  ];
+  myCoding.forEach((item) => {
+    //item return the one by one object from array.
+    console.log(item.languageName); //object ma sa lainga languageName. return:- JavaScript java python
+  });
+
+#08> filter:-
+
+
+
+#09> chaning:-
+
+
+
+#10> map:-
+
+
+
+#11> reduce loop:-
+
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Java script course.</h1>
+    <button id="stop">Stope</button>
+    <button id="start">start</button>
+  </body>
+  <script>
+    //setTimeout ak time ka bad ak bad code exicute keraga.
+    setTimeout(function () {
+      console.log("Print after 2 second...");
+    }, 2000); // 2 second bad exicute hoga code
+
+    const ChangeH1 = () => {
+      const h1 = document.querySelector("h1");
+      h1.innerText = "Best java Script Course.";
+    };
+    const stopSetTimeout = setTimeout(ChangeH1, 3000);
+
+    //Stope setTimeOut using clearTimeout(refrence of setTimeout)
+    // clearTimeout(stopSetTimeout);
+    //or
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearTimeout(stopSetTimeout);
+    });
+
+    /*setInterval ma inner code loop ma chalta hy,
+    dia hua time ka bad bar bar code execute hota rahata hy.
+    break la la ka bar bar loop ma wo function execute hoga.*/
+    // setInterval(() => {
+    //   console.log("Printing in loop after 3 second.");
+    // }, 3000);
+
+    const Interval = function (str) {
+      console.log(str, Date.now());
+    };
+
+    let intervalref;
+
+    document.querySelector("#stop").addEventListener("click", () => {
+      clearInterval(intervalref);
+    });
+
+    document.querySelector("#start").addEventListener("click", () => {
+        intervalref = setInterval(Interval, 1000, "Mritunjay");
+    });
+  </script>
+</html>

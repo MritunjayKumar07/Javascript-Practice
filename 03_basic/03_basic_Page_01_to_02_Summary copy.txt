@@ -24,10 +24,10 @@
       console.log(number1 + number2);
       console.log("Hello..."); //Not Print This Return ka bad koi valur return nhi kerta hy.
     }
-    addTwoNumbers(5, 7); //or you pass null or undefine any things any type of value.
+    addTwoNumbers(5, 7);  //Execute the function //or you pass null or undefine any things any type of value.
     .>5 And 6 is Arguments pass
 
-    const result = addTwoNumbers(3, 5);
+    const result = addTwoNumbers(3, 5); //Give refrence of the function to result
     console.log("Result:", result); //return :-  8 and next Result: undefined
     .>Ya function kuch return nhi ker raha hy, only Console ker raha thays way is print, 
     console not return any things that way Result: undefined.

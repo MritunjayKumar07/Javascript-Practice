@@ -3,13 +3,13 @@ const coding = [1, 2, 3, 4, 5, 6, 7];
 const value = coding.forEach((item) => {
   console.log(item);
 });
-console.log(value); //Print :- JS, Ruby, Python,HTML, C, C++, cpp, undefined
+console.log(value); //Print :- 1 2 3 4 5 6 7 undefiner
 
 const value1 = coding.forEach((item) => {
   console.log(item);
   return item;
 });
-console.log(value1); //return :- undefined
+console.log(value1); //return :- 1 2 3 4 5 6 7 undefiner
 
 console.log("---------------------------------");
 //in any case we want to store the data in variable comming from foreach for using operation in the data. Then How?
