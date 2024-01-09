@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    XMLHttpRequest: readyState property
+    <table>
+      <tr>
+        <th>Value</th>
+        <th>State</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>UNSENT</td>
+        <td>Client has been created. open() not called yet.</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>OPENED</td>
+        <td>open() has been called.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>HEADERS_RECEIVED</td>
+        <td>send() has been called, and headers and status are available.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>LOADING</td>
+        <td>Downloading; responseText holds partial data.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>DONE</td>
+        <td>The operation is complete.</td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    let body = document.querySelector("body");
+    const reqURL = "https://api.github.com/users/MritunjayKumar07";
+    //XMLHttpRequest() :- it's a class
+    //new XMLHttpRequest() :- convert to object using new
+    const xhr = new XMLHttpRequest();
+    console.log("Set the xhr state:", xhr.readyState);
+    xhr.open("GET", reqURL);
+
+    /*xhr.onreadystatechange =>Use to track the state her bar.
+    Ya ak function mangata hy ke humko kerna kya hy. ya asyncronous hy.
+    */
+    xhr.onreadystatechange = () => {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        console.log("Request is completed!");
+        const data1 = xhr.response;
+        console.log(data1);
+        //or you use
+        const data2 = JSON.parse(xhr.responseText);
+        body.innerHTML += `
+        <div style="border: 2px solid #000000; width: 270px; border-radius: 10px;">
+      <div style="padding: 10px 10px">
+        <img
+          width="250px"
+          height="250px"
+          style="border-radius: 10px"
+          src=${data2.avatar_url}
+          alt="image"
+        />
+        <div>
+          <h2>${data2.name}</h2>
+          <strong><span>Location:</span> ${data2.location}</strong>
+          <p>${data2.bio}</p>
+          <div>Followers:${data2.followers} <br />Following:${data2.following}</div>
+          <a
+            style="
+              background: greenyellow;
+              font-size: 18px;
+              font-weight: 900;
+              display: flex;
+              width: 100%;
+              text-align: center;
+              justify-content: center;
+              margin-top: 20px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+              border-radius: 15px;
+              text-decoration: none;
+              color:"#ffffff";
+            "
+            href=${data2.html_url}
+            target="_blank"
+            >View profile</a
+          >
+        </div>
+      </div>
+    </div>
+        `;
+      }
+    };
+    console.log("Open status:", xhr.readyState);
+    xhr.send(); //use to confirm the open
+    /*
+    const xhr = new XMLHttpRequest();
+    console.log("UNSENT", xhr.readyState); // readyState will be 0
+    xhr.open("GET", "/api", true);
+    console.log("OPENED", xhr.readyState); // readyState will be 1
+    xhr.onprogress = () => {
+      console.log("LOADING", xhr.readyState); // readyState will be 3
+    };
+    xhr.onload = () => {
+      console.log("DONE", xhr.readyState); // readyState will be 4
+    };
+    xhr.send(null);*/
+  </script>
+</html>
