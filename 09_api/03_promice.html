@@ -216,7 +216,9 @@
 
     // getAllUses();
 
-    // # 11
+    // # 11  // 2022 ma fetch aya in node js.
+    //catch ma error tab ata hy jub wo fetch nhi ker pata hy network url ko .
+    //lakin anothe status code error aya ga to response ma milaga jo api daga.
     fetch("https://api.github.com/users")
       .then((res) => {
         console.log(res);
@@ -227,6 +229,7 @@
 
     /*One problom :-
     Why api call and error first and othe which are top of the api call are call last after call api.
+    Becouse We learn in lase events async code 'Promice Queue/Micro task Queue' that way it's run first .Iska Priority jayda rahata hy ya Task Queue apacely fetch ka lia banta hy.
      */
   </script>
 </html>
