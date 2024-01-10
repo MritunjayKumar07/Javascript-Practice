@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promice</title>
+  </head>
+  <body>
+    #Promice:- Certainly! Imagine you have a task that takes some time to
+    finish, like fetching data from the internet. The Promise object is like a
+    guarantee or a commitment that the task will be completed in the future. It
+    can either be successful (completed) or unsuccessful (failed). So, the
+    Promise represents the result of that task (the value you get) once it's
+    done, and it lets you handle the outcome, whether it's a success or a
+    failure, in a structured way in your code.
+    <hr />
+    <ul>
+      #A Promise is in one of these:-
+      <li>pending: initial state, neither fulfilled nor rejected.</li>
+      <li>fulfilled: meaning that the operation was completed successfully.</li>
+      <li>rejected: meaning that the operation failed.</li>
+    </ul>
+    #Promice is a onject (IMP)
+    <h2>IMPORTANT:-</h2>
+    <h3>Promice ka handle kerna ka 2 tarika hy.</h3>
+    <ul>
+      <li>1>.that() .catch() .finally()</li>
+      <li>2> async await</li>
+    </ul>
+  </body>
+  <script>
+    /* #01 Promice
+    a> Make Promice or create promice. And promice ak callback function lata hy.
+    Promice 2 he chiz return karagi ya to promice solve ho gaya ya reject ho gaya.*/
+
+    const promiceOne = new Promise((resolve, reject) => {
+      //Do an async task
+      //DB call, criptography, network
+      setTimeout(() => {
+        console.log("Async task is complite");
+        resolve(); // Use to connect to then();
+      }, 3000);
+    }); //Promice is created.
+    //b> then() automatic connected hy resolve ka sath
+    promiceOne.then(() => {
+      console.log("Promic consume");
+    });
+
+    //#02 Promice
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async second task is complite");
+        resolve(); // Use to connect to then();
+      }, 5000);
+    }).then(() => {
+      console.log("Asyn second resolve...");
+    });
+
+    //#3 Promice
+    const PromicThree = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async third task is complite");
+        resolve({ username: "Mritunjay", email: "email@example.com" }); //send resolve data if promice successfull.
+      }, 6000);
+    });
+    PromicThree.then((res) => {
+      console.log(res);
+    });
+
+    //#04 Promice
+    const PromicFour = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async four task is complite");
+        let error = true;
+        if (!error) {
+          resolve({ username: "Mritunjay", password: "123" });
+        } else {
+          reject("Error in authentication");
+        }
+      }, 7000);
+    });
+
+    PromicFour.then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    });
+
+    //#05 Promice Channing Function:-
+    const PromicFive = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async five task is complite");
+        let error = false;
+        if (!error) {
+          resolve({ username: "Mritunjay", password: "123" });
+        } else {
+          reject("Error in authentication");
+        }
+      }, 8000);
+    });
+    PromicFive.then((res) => {
+      console.log(res);
+      return res.username;
+    })
+      .then((name) => {
+        //Channing
+        console.log(`Hello ${name}`);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    //#06 Promice Channing Function:-
+    const PromicSix = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async Six task is complite");
+        let error = false;
+        if (!error) {
+          resolve({ username: "Mritunjay", password: "123" });
+        } else {
+          reject("Error in authentication");
+        }
+      }, 9000);
+    });
+    PromicSix.then((res) => {
+      console.log(res);
+    })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        //finally is run alwase ither promice complit or not.
+        console.log("The promic is either resolve or rejected.");
+      });
+
+    //#07 Promice :-
+    const PromicSeven = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async seven task is complite");
+        let error = true;
+        if (!error) {
+          resolve({ username: "Javascript", password: "123" });
+        } else {
+          reject("Error in authentication");
+        }
+      }, 10000);
+    });
+    //Use asyn awai same as a .then or .catch
+    //async wait kerta hy kam hona ka agar kam ho jata hy to he aga badhata hy kam ma. warna wahi pa error da data hy.
+    ConsumePromicSeven = async () => {
+      //async ma error nhi ayage.
+      const response = await PromicSeven;
+      console.log(response);
+    };
+    ConsumePromicSeven(); //GIve error
+
+    //#08 Promice :-
+    const PromicEight = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async eight task is complite");
+        let error = false;
+        if (!error) {
+          resolve({ username: "C++", password: "123" });
+        } else {
+          reject("Error in authentication");
+        }
+      }, 10000);
+    });
+    //Use asyn awai same as a .then or .catch
+    //async wait kerta hy kam hona ka agar kam ho jata hy to he aga badhata hy kam ma. warna wahi pa error da data hy.
+    ConsumePromicEight = async () => {
+      //async ma error nhi ayage.
+      const response = await PromicEight;
+      console.log(response);
+    };
+    ConsumePromicEight();
+
+    //#09 Promice :-
+    const PromicNine = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Async nine task is complite");
+        let error = false;
+        if (!error) {
+          resolve({ username: "Python", password: "123" });
+        } else {
+          reject("Error in authentication");
+        }
+      }, 10000);
+    });
+    //Use asyn awai same as a .then or .catch
+    //async wait kerta hy kam hona ka agar kam ho jata hy to he aga badhata hy kam ma. warna wahi pa error da data hy.
+    ConsumePromicNine = async () => {
+      //async ma error nhi ayage.
+      try {
+        const response = await PromicNine;
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    ConsumePromicNine();
+
+    //# 10
+    getAllUses = async () => {
+      //fetch ak object hy network url hy time lagaga that way use await.
+      //   https://api.github.com/users
+      try {
+        const res = await fetch("https://api.github.com/users");
+        console.log(res);
+        const data = await res.json(); //To convert the json it's take time that way hear also use await.
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    // getAllUses();
+
+    // # 11
+    fetch("https://api.github.com/users")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    /*One problom :-
+    Why api call and error first and othe which are top of the api call are call last after call api.
+     */
+  </script>
+</html>
