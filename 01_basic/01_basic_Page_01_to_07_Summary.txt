@@ -2,6 +2,7 @@
 
 -curly brace operator : `{}`
 -Square brackets  : `[]`
+-Javascript is prototype language.
 
 #1>Difference Bitween Null, Undefined & symbol (three distinct data types):-
  - Null(Object) :- let val = ""; //absence of value
