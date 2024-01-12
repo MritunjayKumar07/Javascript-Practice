@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <button>Botton Click</button>
+  </body>
+  <script>
+    class Ract {
+      constructor() {
+        this.library = "React";
+        this.server = "https://localhost:3000";
+
+        //requirement
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick);
+      }
+      handleClick() {
+        console.log("Button clicked!"); //Button clicked!
+        console.log(this.server); //Undefine
+        console.log(this); //<button>Botton Click</button>
+      }
+    }
+    const App = new Ract();
+
+    //Use bind to give axcess of constructor to handleClick
+    class Ract1 {
+      constructor() {
+        this.library = "React";
+        this.server = "https://localhost:3000";
+
+        //requirement
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+        //bind(this) is to send bind the all thing and send.
+      }
+      handleClick() {
+        console.log("Button clicked 1!"); //Button clicked!
+        console.log(this.server); //https://localhost:3000/
+        console.log(this); //Ract1 {library: 'React', server: 'https://localhost:3000'} library:"React" server :  "https://localhost:3000" [[Prototype]] :  Object
+      }
+    }
+    const App1 = new Ract1();
+  </script>
+</html>
