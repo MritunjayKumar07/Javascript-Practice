@@ -49,3 +49,35 @@ console.log(userFour);
 /*`new`: Use new to create empty object. function call 
 hota hy `new` key word ka karan `new` key work jo bhe 
 data hy usko apna andar pack ker ka da data.*/
+
+
+/* #03:- Property and method:-
+- both properties and methods are members of objects, but they serve different purposes:
+ a> Property: 
+ - A property is a key-value pair associated with an object.
+ - Accessed using dot notation (object.property) or bracket notation (object["property"]).
+*/
+  const person = {
+    name: "John",
+    age: 30,
+    occupation: "Engineer"
+  };
+  console.log(person.name); // Accessing property using dot notation
+  console.log(person["age"]); // Accessing property using bracket notation
+/*
+  b> Method:
+  - A method is a function that is associated with an object.
+  - It is a property of the object whose value is a function.
+  - Invoked using parentheses () after the method name.
+  - Methods perform actions or provide functionalities related to the object.
+*/
+  const calculator = {
+    add: function (a, b) {
+      return a + b;
+    },
+    subtract: function (a, b) {
+      return a - b;
+    }
+  };
+  console.log(calculator.add(5, 3)); // Invoking the add method
+  console.log(calculator.subtract(8, 4)); // Invoking the subtract method
