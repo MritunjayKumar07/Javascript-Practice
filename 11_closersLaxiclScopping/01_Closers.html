@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closer</title>
+  </head>
+  <body>
+    <h1>Closers</h1>
+    <span
+      >closure gives you
+      <strong>access to an outer function's scope</strong> from an inner
+      function. In JavaScript, closures are created every time a function is
+      created, at function creation time.
+    </span>
+    <br />
+    <br />
+    <br />
+    <br />
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    //Lexical (Closers samajhna sa pahala lexical samajhna padaga):-
+    function Outer(params) {
+      let myName = "Mritunjay";
+    }
+    // console.log(myName); //Return error:- 01_Closers.html:59 Uncaught ReferenceError: myName is not defined
+
+    function OuterFun() {
+      let name = "Mozilla";
+      function InnerFun() {
+        console.log(name); // use variable declared in the parent function
+      }
+      InnerFun();
+    }
+    OuterFun();
+    //Lexical scope ma ya bata hy ke Parents scope apna memory share kerta hy child scope ko.
+
+    //Closers:-
+    function makeFunc() {
+      const name = "Mritunjay Kumar";
+      function displayName() {
+        console.log(name);
+      }
+      return displayName;
+      //Function ka refrence return ker raha hy. Or Execution return ker raha hy
+      //OR More Important Hum yaha Pura ka Pura memory return ker raha hy.Or pura ka pura lexical scoper uth ka ja raha hy.
+      //Intriview ma lexical bolna hy.
+      //   Yaha Pura ka pura Lexical scope return ker raha hy
+    }
+    //Yaha hum Pura ka pura outer and inner function ka refrence da raha hy myFun ko
+    const myFunc = makeFunc(); // makeFunc() yaha execute nhi ker raha hy hum refrence da raha hy
+    //Agar hum function execute karinga to yah execute ho ka khatam ho jayaga function (execute and remove from call stack)
+    myFunc(); //Yaha execute ker raha hy.
+    console.log(myFunc.name); // return :- displayName
+
+    //Closers function ka andar ka function ko return kerta hy. uska defination ko.
+  </script>
+  <script>
+    //#01:-
+    // document.getElementById("orange").onclick = () => {
+    //   document.body.style.background = `orange`;
+    // };
+    // document.getElementById("green").onclick = () => {
+    //   document.body.style.background = `green`;
+    // }; Thes are not good way agar 50 button hua to
+
+    //#02:-
+    // const clickHandler = (color) => {
+    //   document.body.style.background = color;
+    // };
+    /*document.getElementById("orange").onclick = clickHandler;
+    Ya pa hum function ka refrence dia hy, It mins yada hum function ka defination da dua hy.*/
+
+    // document.getElementById("orange").onclick = clickHandler("orange");
+    // document.getElementById("green").onclick = clickHandler("green");
+
+    //#03:-
+    //Lexical and Closer real world problom solution.
+    const clickHandler2 = (color) => {
+      return () => {
+        document.body.style.background = color;
+      };
+      //clickHandler2 return another function unNamed function.
+
+    };
+    document.getElementById("orange").onclick = clickHandler2("orange");
+    document.getElementById("green").onclick = clickHandler2("green");
+  </script>
+</html>
