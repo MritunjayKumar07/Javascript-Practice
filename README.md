@@ -115,7 +115,8 @@ console.log([typeof heroArr, typeof heroObj, typeof heroFunn])
 return:- ['object', 'object', 'function']
 ```
 
-## Memory Management `Two Types:-Stack,Heap`
+## Memory Management 
+- `Two Types:-Stack,Heap`
 
 ### Primitive Datatype use the Stack memory.
 
