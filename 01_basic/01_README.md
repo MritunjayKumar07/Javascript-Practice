@@ -146,7 +146,7 @@ return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
 
 ```
 
-![STACK Memory Diagram](./01_basic/01_basic_Page_01_to_07_Diagram_01.png)
+![STACK Memory Diagram](./01_basic_Page_01_to_07_Diagram_01.png)
 
 ### Non-Primitive Datatype use the Heap memory.
 
@@ -176,5 +176,5 @@ return :-
 
 
 ```
-![HEAP Memory Diagram](./01_basic/01_basic_Page_01_to_07_Diagram_02.png)
+![HEAP Memory Diagram](./01_basic_Page_01_to_07_Diagram_02.png)
 
