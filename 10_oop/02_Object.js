@@ -5,7 +5,7 @@ ex:-Array decelear redirect to Object > Object redirect to null
 ex:-String or etc decelear redirect to Object > Object redirect to null
 console.log(Object.__proto__);   //null
 */
-//`this` min `gis` na bhe
+//`this` min `Jis` na bhe
 
 //Now see where function decelear & redirect to where?
 function PersonMarks(num) {

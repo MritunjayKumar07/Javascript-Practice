@@ -29,7 +29,7 @@ function CreateUser1(userName, email, password) {
     call stack sa hat ja raha hy.
     Execution ma hoata hy ke jo bhe execute ho raha hy wo execute ho ka hat jayaga.
     To is lia refernce hold ker ka rakhna hy refrence hold kerna ka bohot tarika hy `.bind`, `.call` and etc.
-    */
+    3rd points : function behave two type object and function*/
   CheakUserName1.call(this, userName); 
   // Hum apna `this` da raha hy. Fir CheakUserName1  ya function apna `this` na use keraga mera `this use keraga.
   //It mins hum apna current exeecution shift ker raha hy CheakUserName1 ma.
