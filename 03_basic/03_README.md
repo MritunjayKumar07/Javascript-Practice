@@ -10,6 +10,7 @@
 6. [Use Symbol key inside Object](#use-symbol-key-inside-object)
 7. [Object freeze](#object-freeze)
 8. [Singleton or Consteracter](#singleton-or-consteracter)
+8. [Execution Context & Call Stack](#execution-context-&-call-stack)
 
 ## Basic of Functions
 
@@ -360,3 +361,6 @@ let person = {
 };
 const { cityName: city, age, name } = person; // 2th Way (Correct Way) (cityName: city, Change the variable city = cityName)
 ```
+
+## Execution Context & Call Stack
+![Execution Context & Call Stack](../03_basic/03_basic_Page_05_to_06_Summary.png)
