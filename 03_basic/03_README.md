@@ -3,14 +3,14 @@
 ## Topics Covered:
 
 1. [Basic of Functions](#basic-of-functions)
-2. [Parameters & Arguments](#parameters-&-arguments)
+2. [Parameters And Arguments](#parameters-and-arguments)
 3. [Scope](#scope)
 4. [OBJECTS](#objects)
 5. [Literal](#literal)
 6. [Use Symbol key inside Object](#use-symbol-key-inside-object)
 7. [Object freeze](#object-freeze)
 8. [Singleton or Consteracter](#singleton-or-consteracter)
-8. [Execution Context & Call Stack](#execution-context-&-call-stack)
+8. [Execution Context And Call Stack](#execution-context-and-call-stack)
 
 ## Basic of Functions
 
@@ -35,7 +35,7 @@ function saymayname() {
 
 - `fun();` => Call the function.
 
-## Parameters & Arguments
+## Parameters And Arguments
 
 ```javascript
 function addTwoNumbers(number1, number2) {
@@ -362,5 +362,5 @@ let person = {
 const { cityName: city, age, name } = person; // 2th Way (Correct Way) (cityName: city, Change the variable city = cityName)
 ```
 
-## Execution Context & Call Stack
+## Execution Context And Call Stack
 ![Execution Context & Call Stack](../03_basic/03_basic_Page_05_to_06_Summary.png)
