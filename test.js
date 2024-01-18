@@ -40,3 +40,10 @@ console.log(Object.isFrozen(user1));
 const UnFreezonObject = Object.assign({}, user1);
 UnFreezonObject.email = "kumar@gmail.com";
 console.log(UnFreezonObject)
+console.log('------------------------------------------------------------------------------')
+const myCoding1 = [10, 24, 29, 5];
+const myTotal = myCoding1.reduce((acc, curentVal) => {
+  console.log(`accumilater Value: ${acc} & current Value: ${curentVal}`);
+  return acc + curentVal;
+}, 100);
+console.log(myTotal);
