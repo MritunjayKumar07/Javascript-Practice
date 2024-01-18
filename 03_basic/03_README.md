@@ -364,3 +364,4 @@ const { cityName: city, age, name } = person; // 2th Way (Correct Way) (cityName
 
 ## Execution Context And Call Stack
 ![Execution Context & Call Stack](../03_basic/03_basic_Page_05_to_06_Summary.png)
+
