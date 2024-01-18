@@ -32,3 +32,11 @@ console.log(user["symbolKey"])
 // `user[symbolKey];` //return :- undefined
 // `user1[symbolKey];` //Axcess Symbol return :- User123
 // `user1["symbolKey"];` //return :- Kumar
+user1.email = "Mritunjay@gmail.com";
+console.log(user1)
+Object.freeze(user1);
+user1.email = "kumar@gmail.com";
+console.log(Object.isFrozen(user1));
+const UnFreezonObject = Object.assign({}, user1);
+UnFreezonObject.email = "kumar@gmail.com";
+console.log(UnFreezonObject)

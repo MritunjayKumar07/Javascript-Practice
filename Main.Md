@@ -608,6 +608,12 @@ const user1 = {
 - `const UnFreezonObject = Object.assign({}, user1);` UsFreez the Object.
 
 ```javascript
+UnFreezonObject.email = "Mritunjay@gmail.com";
+console.log(UnFreezonObject)
+Return :- { name: 'Mritunjay', symbolKey: 'User123', age: 18, email: 'Mritunjay@gmail.com', [Symbol(ID)]: 'User123'}
+
+//Or make method.
+
 UnFreezonObject.greeting = function () {
     console.log("Hello Function...");
 };
