@@ -481,6 +481,8 @@ Return: -[100, 200, 300, 400];
 
 - `new Object();` All method when use in console.
 - Object Declear two way `Literals, Constructer`.
+- Different bitween the `Literals & Constructer` is Singleton. Non singleton `{}`, singleton `new Object()`. Singleton created by Constructer only.
+
 ### 1. Literal Wise
 - `Using literal notation is a straightforward way to create an object`.
 
