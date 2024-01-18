@@ -57,7 +57,7 @@
 
 ## Operations `(+,-,<,>,*,/,%,==,!=,===,>=,<=)`
 
-- "str"+2=>str2 
+- "str"+2=>str2
 - 1+"str"=>1str
 - 1+"2"=>12 (type of string)
 - 2+2+"2"=>42 (type of string)
@@ -446,7 +446,23 @@ Array.isArray("Mritunjay Kumar"); //Cheak is array or not
 Return: -false;
 
 Array.from("Mritunjay Kumar"); //Convert to array
-Return: -["M","r","i","t","u","n","j","a","y"," ","K","u","m","a","r",];
+Return: -[
+  "M",
+  "r",
+  "i",
+  "t",
+  "u",
+  "n",
+  "j",
+  "a",
+  "y",
+  " ",
+  "K",
+  "u",
+  "m",
+  "a",
+  "r",
+];
 
 console.log(Array.from({ name: "mritunjay" }));
 // convert in to array empty array return :- {}
@@ -463,36 +479,37 @@ Return: -[100, 200, 300, 400];
 
 ## OBJECTS
 
-- Object Declear two way `Literals, Constructer`
-- Different Bitween Literal And Consteracter is only `Singleton`: Litrals can't make singleton, But Constructer make Singleton.
 - `new Object();` All method when use in console.
-
-## Create array
-
-### 1. Object made by Singleton
-
--` const TinderObject = new Object();` This is Singleton Object
-
-### 2. constructor wise
+- Object Declear two way `Literals, Constructer`.
+### 1. Literal Wise
+- `Using literal notation is a straightforward way to create an object`.
 
 ```javascript
-function vehicle(name, maker, engine) {
-  this.name = name;
-  this.maker = maker;
-  this.engine = engine;
-}
-let car = new vehicle("GT", "BMW", "1998cc");
-```
-
-### 3. literals wizw
-
-```javascript
+Example:-
 let car = {
   name: "GT",
   maker: "BMW",
   engine: "1998cc",
 };
+
 ```
+
+### 2. Constructor Wise
+- Constructor `Constructors are functions` used with the `new` keyword to create instances(occurrence of something) of objects.
+
+```javascript
+Example: -function Vehicle(name, maker, engine) {
+  this.name = name;
+  this.maker = maker;
+  this.engine = engine;
+};
+let car = new Vehicle("GT", "BMW", "1998cc");
+```
+
+
+### 3. Singleton Object
+
+-` const TinderObject = new Object();` This is Singleton Object.
 
 ### 4. Using Object.create()
 
