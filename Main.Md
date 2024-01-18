@@ -640,7 +640,7 @@ const Object1 = new Object(); // This is Singleton Object
 const Object2 = {}; // This is Non Singleton Object
 ```
 
-### 2. Some Property
+### 2. Some Mrthods
 
 ```javascript
 const TinderObject = {};
