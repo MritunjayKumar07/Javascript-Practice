@@ -484,6 +484,7 @@ Return: -[100, 200, 300, 400];
 - Different bitween the `Literals & Constructer` is Singleton. Non singleton `{}`, singleton `new Object()`. Singleton created by Constructer only.
 
 ### 1. Literal Wise
+
 - `Using literal notation is a straightforward way to create an object`.
 
 ```javascript
@@ -497,6 +498,7 @@ let car = {
 ```
 
 ### 2. Constructor Wise
+
 - Constructor `Constructors are functions` used with the `new` keyword to create instances(occurrence of something) of objects.
 
 ```javascript
@@ -507,7 +509,6 @@ Example: -function Vehicle(name, maker, engine) {
 };
 let car = new Vehicle("GT", "BMW", "1998cc");
 ```
-
 
 ### 3. Singleton Object
 
@@ -555,22 +556,33 @@ const JsUsers = {  //Create Object with Key and value
       return this.firstName + ' ' + this.lastName;
     }
 }
-//person is an object literal with properties firstName, lastName, age, and a method fullName.
+//JsUsers is an object literal with properties firstName, lastName, age, and method is fullName.
 
 JsUsers.email; //Get data from Object
-JsUsers."full name"; `or Use` JsUsers.full name; //Give Error
-JsUsers["full name"]; //Use Another way Becouse JsUsers.full name not posible thats way we use another way JsUsers[""full name""]
+JsUsers."full name"; //or Use JsUsers.full name; //Both Give Error
+JsUsers["full name"]; //Use Another way Becouse JsUsers.full name not posible, thats way we use JsUsers[""full name""]
+```
+
+### Get value from Object
+
+```javascript
+const user = {
+  name: "Mritunjay",
+  symbolKey: "User123", //not Work This Way symbolKey Kay is a type of string.
+  age: 18,
+};
+- `user["age"];` return :- 18 //Get value from object.
+- `user["name"];` return :- Mritunjay
+- `user["symbolKey"]` return :- User123
+- `user[symbolKey];` return :- undefined //Not that wat to get value
+- `user[age];` return :- undefined
+- `user[name];` return :- undefined
 ```
 
 ### use Symbol key inside Object `Using [Key]`
 
 ```javascript
 const symbolKey = Symbol("ID");
-const user = {
-  name: "Mritunjay",
-  symbolKey: "User123", //not Work This Way symbolKey Kay is a type of string.
-  age: 18,
-};
 const user1 = {
   name: "Mritunjay",
   symbolKey: "Kumar",
@@ -578,8 +590,6 @@ const user1 = {
   age: 18,
 };
 ```
-
-- `user[symbolKey];` return :- undefined
 - `user1[symbolKey];` Axcess Symbol return :- User123
 - `user1["symbolKey"];` return :- Kumar
 

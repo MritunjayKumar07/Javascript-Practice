@@ -16,4 +16,19 @@ console.log(arr.slice(1, 3))
 console.log(arr.splice(1, 3))
 console.log(arr)
 console.log('------------------------------------------------------------------------------')
-console.log(Array.of("Mritunjay"))
+const symbolKey = Symbol("ID");
+const user = {
+  name: "Mritunjay",
+  symbolKey: "User123", //not Work This Way symbolKey Kay is a type of string.
+  age: 18,
+};
+const user1 = {
+  name: "Mritunjay",
+  symbolKey: "Kumar",
+  [symbolKey]: "User123", //Work This Way symbolKey Kay is a type of Symbol.
+  age: 18,
+};
+console.log(user["symbolKey"])
+// `user[symbolKey];` //return :- undefined
+// `user1[symbolKey];` //Axcess Symbol return :- User123
+// `user1["symbolKey"];` //return :- Kumar
