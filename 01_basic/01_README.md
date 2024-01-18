@@ -38,11 +38,12 @@
 
 ## Operations `(+,-,<,>,*,/,%,==,!=,===,>=,<=)`
 
-- "str"+2=>str2
+- "str"+2=>str2 
 - 1+"str"=>1str
-- 1+"2"=>12
-- 2+2+"2"=>42
-- "2"+2+2=>222
+- 1+"2"=>12 (type of string)
+- 2+2+"2"=>42 (type of string)
+- "2"+2=>22 (type of string)
+- "2"+2+2=>222 (type of string)
 - 2+4*5/9 => Wrong Way Use this way ((2+4)*5)/9
 
 - if true = 1
