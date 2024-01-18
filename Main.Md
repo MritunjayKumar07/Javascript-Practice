@@ -337,7 +337,7 @@ Return: -["mritunjay", true, 452522, 1, "mk", false];
 arr[3]; //Get Particuler value by index id from array
 Return: -1;
 
-arr.push("Rahul"); //Add element on lase in array
+arr.push("Rahul"); //Add element on last in array
 Return: -["mritunjay", true, 452522, 1, "mk", false, "Rahul"];
 
 arr.pop(); //Remove last element from last and return removal element
@@ -370,7 +370,7 @@ Return: -mritunjay, true, 452522, 1, "mk", false;
 arr = [4, 5, 6, "mritunjay", true];
 ```
 
-### Slice `Extract a section of an Original Array`
+### Slice `Extract a section of an Array`
 
 Syntax : arr.slice(startIndex, endIndex)
 
@@ -402,7 +402,7 @@ console.log("D", arr);
 Return: -D[(4, true)];
 ```
 
-## Some methode
+## Some methode <mark>IMP</mark>
 
 ```javascript
 const arr1 = ["Mritunjay", 9835678727, true];
@@ -446,23 +446,7 @@ Array.isArray("Mritunjay Kumar"); //Cheak is array or not
 Return: -false;
 
 Array.from("Mritunjay Kumar"); //Convert to array
-Return: -[
-  "M",
-  "r",
-  "i",
-  "t",
-  "u",
-  "n",
-  "j",
-  "a",
-  "y",
-  " ",
-  "K",
-  "u",
-  "m",
-  "a",
-  "r",
-];
+Return: -["M","r","i","t","u","n","j","a","y"," ","K","u","m","a","r",];
 
 console.log(Array.from({ name: "mritunjay" }));
 // convert in to array empty array return :- {}
