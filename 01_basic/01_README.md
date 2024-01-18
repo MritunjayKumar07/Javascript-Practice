@@ -127,10 +127,7 @@ return:- ['object', 'object', 'function']
   They are small in size and can be stored on the stack memory. Stack memory is a portion of the RAM where the CPU stores
   primitive data types, method calls, and local variables.
 
-- The difference between the primitive data type and the
-  stack memory is subtle. Primitive data types are stored
-  directly on the stack memory. When you create a variable
-  and assign a value to it, the value is stored in the memory allocated for that variable.
+- The difference between the primitive data type and the stack memory is `SUBTITLE`. Primitive data types are stored directly on the stack memory. When you create a variable and assign a value to it, the value is stored in the memory allocated for that variable.
 
 - For example, in JS, if you declare a number variable, const num = 10;,the value 10 is stored in the stack memory as a 32-bit integer.
 
@@ -153,10 +150,7 @@ return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
 
 - Non-primitive data types are stored in heap memory.
 
-- Heap memory is a large and flexible area of memory
-  used for dynamic memory allocation.
-  When a new object is created in the JS,
-  it is allocated memory in the heap memory.
+- Heap memory is a large and flexible area of memory used for dynamic memory allocation. When a new object is created in the JS, it is allocated memory in the heap memory.
 
 - For example, when you create an integer array of length 10,you are creating an object that consists of an integer array reference,an integer count, and 10 integer values.Each integer is 32 bits in size, so the entire array object is approximately 400 bits (32 bits x 10 integers) in size.
 
@@ -242,7 +236,7 @@ const balance = new Number(100);
 
 - If you try to run in the browser console this line `new Number(100)` you got all methods and property of numbers.
 
-### Some Methods of string
+### Some Methods of Numbers
 
 ```javascript
 balance = 1;

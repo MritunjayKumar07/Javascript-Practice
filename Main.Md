@@ -261,7 +261,7 @@ const balance = new Number(100);
 
 - If you try to run in the browser console this line `new Number(100)` you got all methods and property of numbers.
 
-### Some Methods of string
+### Some Methods of Numbers
 
 ```javascript
 balance = 1;

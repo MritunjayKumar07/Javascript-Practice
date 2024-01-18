@@ -95,7 +95,7 @@ Nots (Conversion Number):
    primitive data types, method calls, and local variables.
 
   *The difference between the primitive data type and the 
-   stack memory is subtle. Primitive data types are stored 
+   stack memory is `SUBTITLE`. Primitive data types are stored 
    directly on the stack memory. When you create a variable 
    and assign a value to it, the value is stored in the memory 
    allocated for that variable.
