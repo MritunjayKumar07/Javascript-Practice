@@ -590,8 +590,11 @@ const user = {
   age: 18,
 };
 - `user["age"];` return :- 18 //Get value from object.
+- `user.age` return :- 18
 - `user["name"];` return :- Mritunjay
+- `user.name` return :- Mritunjay
 - `user["symbolKey"]` return :- User123
+- `user.symbolKey` return :- User123
 - `user[symbolKey];` return :- undefined //Not that wat to get value
 - `user[age];` return :- undefined
 - `user[name];` return :- undefined
