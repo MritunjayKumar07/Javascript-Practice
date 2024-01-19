@@ -661,7 +661,7 @@ const Object1 = new Object(); // This is Singleton Object
 const Object2 = {}; // This is Non Singleton Object
 ```
 
-### 2. Some Mrthods
+### 2. Some Methods
 
 ```javascript
 const TinderObject = {};
@@ -758,11 +758,11 @@ function saymayname() {
 - `{}` => Scop of the function,
 - `{ console.log("Mritunjay") }` => Defination of the function in side the scope,
 - `saymayname();` => Exicut the function (immediately invokes ).
-- `const fun = saymayname;` => assigns the reference to the saymayname function (without invoking it) to the variable fun.
+- `const fun = saymayname;` => `assigns the reference` to the saymayname function `(without invoking it)` to the variable fun.
 
-- `const fun = saymayname();`=> Assigns the result of invoking the saymayname
-  function to the variable `fun`.However, since saymayname does not have a
-  return statement, it returns undefined. As a result, `fun` will be assigned
+- `const fun = saymayname();`=>`Assigns the result` of `invoking the saymayname
+  function` to the variable `fun`.However, since `saymayname does not have a
+  return` statement, `it returns undefined`. As a result, `fun` will be assigned
   the value `undefined`, and the function will be executed immediately.
 
 - `fun();` => Call the function.
@@ -772,27 +772,27 @@ function saymayname() {
 ```javascript
 function addTwoNumbers(number1, number2) {
   //number1, number2 is taking Parameters
-  console.log(number1 + number2);
+  return number1 + number2;
   console.log("Hello..."); //Not Print This Return ka bad koi valur return nhi kerta hy.
 }
-addTwoNumbers(5, 7); //Execute the function //or you pass null or undefine any things any type of value.
+addTwoNumbers(3, 5); //Execute the function //or you pass null or undefine any things any type of value.
 ```
 
-- 5 And 6 is `Arguments pass`
+- 3 And 5 is `Arguments pass`
 - const result = addTwoNumbers(3, 5); //Give refrence of the function to result
 - console.log("Result:", result); //return :- 8 and next Result: undefined
-- Ya function kuch return nhi ker raha hy, only Console ker raha thays way is print, console not return any things that way Result: undefined.
-- `One Scope take only one return`, If multiple scope in side scope then use Mritunjay return in each scope.
 
 ```javascript
 function addTwoNumbers2(number1, number2) {
-  return number1 + number2;
+  console.log(number1 + number2);
 }
 ```
 
 - const result2 = addTwoNumbers2(3, 5);
-- console.log("Result:", result2); //return :- Result: 8
+- console.log("Result:", result2); //return :- Result: Undefine
 - if you return then show return
+- Ya function kuch return nhi ker raha hy, only Console ker raha thays way is print, console not return any things that way Result: undefined.
+- `One Scope take only one return`, If multiple scope in side scope then use Mritunjay return in each scope.
 
 ```javascript
 function loginUserMessage(userName) {
