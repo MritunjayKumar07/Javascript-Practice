@@ -161,7 +161,7 @@ return:- ['object', 'object', 'function']
 ### Primitive Datatype use the Stack memory.
 
 - Primitive data types directly contain values.
-  They are small in size and can be stored on the stack memory. Stack memory is a portion of the RAM where the CPU stores
+  They are `small in size and can be stored on the stack memory`. Stack memory is a portion of the RAM where the CPU stores
   primitive data types, method calls, and local variables.
 
 - The difference between the primitive data type and the
@@ -190,8 +190,8 @@ return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
 
 - Non-primitive data types are stored in heap memory.
 
-- Heap memory is a large and flexible area of memory
-  used for dynamic memory allocation.
+- Heap memory is a `large and flexible area of memory
+  used for dynamic memory allocation`.
   When a new object is created in the JS,
   it is allocated memory in the heap memory.
 
