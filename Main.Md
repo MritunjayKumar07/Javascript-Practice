@@ -167,7 +167,7 @@ return:- ['object', 'object', 'function']
 ### Primitive Datatype use the Stack memory.
 
 - Primitive data types directly contain values.
-  They are small in size and can be stored on the stack memory. Stack memory is a portion of the RAM where the CPU stores
+  They are `small in size and can be stored on the stack memory`. Stack memory is a portion of the RAM where the CPU stores
   primitive data types, method calls, and local variables.
 
 - The difference between the primitive data type and the
@@ -196,8 +196,8 @@ return:-[ 'MritunjayKumar', 'YoutubeChannel' ]
 
 - Non-primitive data types are stored in heap memory.
 
-- Heap memory is a large and flexible area of memory
-  used for dynamic memory allocation.
+- Heap memory is a `large and flexible area of memory
+  used for dynamic memory allocation`.
   When a new object is created in the JS,
   it is allocated memory in the heap memory.
 
@@ -596,8 +596,11 @@ const user = {
   age: 18,
 };
 - `user["age"];` return :- 18 //Get value from object.
+- `user.age` return :- 18
 - `user["name"];` return :- Mritunjay
+- `user.name` return :- Mritunjay
 - `user["symbolKey"]` return :- User123
+- `user.symbolKey` return :- User123
 - `user[symbolKey];` return :- undefined //Not that wat to get value
 - `user[age];` return :- undefined
 - `user[name];` return :- undefined
@@ -664,7 +667,7 @@ const Object1 = new Object(); // This is Singleton Object
 const Object2 = {}; // This is Non Singleton Object
 ```
 
-### 2. Some Mrthods
+### 2. Some Methods
 
 ```javascript
 const TinderObject = {};
@@ -761,11 +764,11 @@ function saymayname() {
 - `{}` => Scop of the function,
 - `{ console.log("Mritunjay") }` => Defination of the function in side the scope,
 - `saymayname();` => Exicut the function (immediately invokes ).
-- `const fun = saymayname;` => assigns the reference to the saymayname function (without invoking it) to the variable fun.
+- `const fun = saymayname;` => `assigns the reference` to the saymayname function `(without invoking it)` to the variable fun.
 
-- `const fun = saymayname();`=> Assigns the result of invoking the saymayname
-  function to the variable `fun`.However, since saymayname does not have a
-  return statement, it returns undefined. As a result, `fun` will be assigned
+- `const fun = saymayname();`=>`Assigns the result` of `invoking the saymayname
+  function` to the variable `fun`.However, since `saymayname does not have a
+  return` statement, `it returns undefined`. As a result, `fun` will be assigned
   the value `undefined`, and the function will be executed immediately.
 
 - `fun();` => Call the function.
@@ -775,27 +778,27 @@ function saymayname() {
 ```javascript
 function addTwoNumbers(number1, number2) {
   //number1, number2 is taking Parameters
-  console.log(number1 + number2);
+  return number1 + number2;
   console.log("Hello..."); //Not Print This Return ka bad koi valur return nhi kerta hy.
 }
-addTwoNumbers(5, 7); //Execute the function //or you pass null or undefine any things any type of value.
+addTwoNumbers(3, 5); //Execute the function //or you pass null or undefine any things any type of value.
 ```
 
-- 5 And 6 is `Arguments pass`
+- 3 And 5 is `Arguments pass`
 - const result = addTwoNumbers(3, 5); //Give refrence of the function to result
 - console.log("Result:", result); //return :- 8 and next Result: undefined
-- Ya function kuch return nhi ker raha hy, only Console ker raha thays way is print, console not return any things that way Result: undefined.
-- `One Scope take only one return`, If multiple scope in side scope then use Mritunjay return in each scope.
 
 ```javascript
 function addTwoNumbers2(number1, number2) {
-  return number1 + number2;
+  console.log(number1 + number2);
 }
 ```
 
 - const result2 = addTwoNumbers2(3, 5);
-- console.log("Result:", result2); //return :- Result: 8
+- console.log("Result:", result2); //return :- Result: Undefine
 - if you return then show return
+- Ya function kuch return nhi ker raha hy, only Console ker raha thays way is print, console not return any things that way Result: undefined.
+- `One Scope take only one return`, If multiple scope in side scope then use Mritunjay return in each scope.
 
 ```javascript
 function loginUserMessage(userName) {
