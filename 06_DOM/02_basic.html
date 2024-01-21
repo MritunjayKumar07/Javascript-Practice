@@ -68,7 +68,7 @@
 
       //04> Get Element by className:-
       const get2 = document.getElementsByClassName("Header");
-      console.log(get2); //return data in the forem of NodeList(8) [h2, h2]
+      console.log(get2);
 
       //05> Get Element by querySelecter:-
       // const get3 = document.querySelector("#title");
@@ -91,7 +91,9 @@
 
       const ulgetAll = document.querySelectorAll("li"); //return:-NodeList(3) [li, li, li]  // when you go inside prototype of nodeList.
       //it's not array not work array prototype work only NodeList prototype.
-      ulgetAll[0].style.color = "red"; //work
+      console.log(ulgetAll)
+      console.log(ulgetAll[0])
+      ulgetAll[0].style.background = "red"; //work
       ulgetAll.forEach((item) => {
         console.log(item.innerText); //return one by one all li text
         item.style.background = "yellow";
@@ -101,7 +103,8 @@
       //07 Get element by className:-
       console.log(document.getElementsByClassName("")); // return:- HTMLCollection [] anothe selecter ma null daga.
       const getByClass = document.getElementsByClassName("list-item");
-      console.log(getByClass); //How to select and work on all list
+      console.log(getByClass); //Return :- HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+      //How to select and work on all list
       // then convert HTMLCollection [] into Array:-
       let arr = Array.from(getByClass);
       console.log(arr); //return:- (4) [li.list-item, li.list-item, li.list-item, li.list-item]

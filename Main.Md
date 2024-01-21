@@ -50,6 +50,12 @@
 42. [Map](#map)
 43. [Chaning](#chaning)
 44. [Reduce loop](#reduce-loop)
+45. [Diagram of HTML Work in Windows](#diagram-of-html-work-in-windows)
+46. [Windows Basic](#windows-basic)
+47. [Color Changer Project](#color-changer)
+48. [Your Body Mass Project](#your-body-mass)
+49. [Digital Clock Project](#digital-clock)
+50. [Guess The Number Project](#guess-the-number)
 
 ## Difference Between Null, Undefined & Symbol `three distinct data types`
 
@@ -1609,4 +1615,336 @@ const shoppingBag = [
 //add all amount of shopping bag:-
 const BagAmount = shoppingBag.reduce((acc, item) => acc + item.price, 0);
 console.log(BagAmount);
+```
+
+## Diagram of HTML Work in Windows
+
+![Diagram of HTML Work in Windows](./06_DOM/01_basic.png)
+
+## Windows Basic
+
+- `console.log(document)` return every things for windows.
+- `console.log(document.baseURL)` then return URL of page.
+- `console.log(document.link)` then return all link's us in this document's. Or ya HTML collection ka ande link return kerta hy na ke array ka ande.
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2 id="title" class="Header">DOM learning on Mritunjay kumar.</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+    <input type="number" />
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <ul>
+      <li class="list-item">One</li>
+      <li class="list-item">Two</li>
+      <li class="list-item">Three</li>
+      <li class="list-item">Four</li>
+    </ul>
+    <script></script>
+  </body>
+</html>
+
+```
+
+### 1. Getting value by ID
+
+```javascript
+const get1 = document.getElementById("title");
+
+console.log(get1);
+return :-  <h2 id="title">DOM learning on Mritunjay kumar.</h2>
+
+console.log(get1.id);
+return :-  title
+
+console.log(get1.class);
+return :-  undefined
+//class is not use in Javascript use className
+
+console.log(get1.className);
+return :-  Header
+
+console.log(get1.getAttribute);
+return:- ƒ getAttribute() { [native code] }
+//it's a function
+
+console.log(get1.getAttribute("id"));
+return:- title
+
+console.log(get1.getAttribute("class"));
+return:- Header
+```
+
+### 2. Set value by ID
+
+```javascript
+get1.setAttribute("class", "test");
+```
+
+- class attribut ma set kia test name ka class.
+- setAttribute ma jo set kigia ga wo overWrite kearga olde attribule ka value ko.
+- `get1.setAttribute("class", "Header test");` It's set old value and new avalue.
+- Set Style
+
+```javascript
+get1.style.backgroundColor = "green";
+get1.style.padding = "10px";
+get1.style.borderRadius = "15px";
+```
+
+### 3. Get content
+
+```javascript
+console.log(get1.textContent);
+return :- DOM learning on Mritunjay kumar.
+
+console.log(get1.innerHTML);
+return :- DOM learning on Mritunjay kumar.
+
+console.log(get1.innerText);
+return :- DOM learning on Mritunjay kumar.
+```
+
+### 4. Different between textContent and innerText
+
+- textContent is not effected by HTML tag like `<b>,<i>`. etc.
+- innerText is effected by HTML tag like `<b>,<i>`. etc.
+
+- let h2 is `<h2 id="title" class="Header">DOM learning on <span style="display:none;">Mritunjay kumar.</span></h2>`.
+- `get1.innerText` = `return :- DOM learning on`.
+- `get1.textContent` = `return :- DOM learning on Mritunjay kumar`.
+- `get1.innerHTML` = `return :- DOM learning on <span style="display:none;">Mritunjay kumar.</span>`.
+
+### 5. Get Element by className
+
+```javascript
+const get2 = document.getElementsByClassName("Header");
+
+console.log(get2);
+```
+
+### 6. Get Element by querySelecter
+
+- `const get3 = document.querySelector("#title");`.
+
+- `const get3 = document.querySelector(".Header");`.
+- `const get3 = document.querySelector("h2");`. Only return 1th element's. :- `<h2 id="title" class="Header">DOM learning on Mritunjay kumar.</h2>`
+- `const get3 = document.querySelector('input[type="number"]');`. its an css selecter. return:-`<input type="number">`
+- `const get3 = document.querySelector('p:first-child');`. its an css selecter. return:-<`input type="number">`
+
+### 7. Advance Selecter querySelector And querySelectorAll
+
+```javascript
+const ulget = document.querySelector("ul");
+return whole ul
+
+const liget = ulget.querySelector("li");
+return 1th li elements.
+
+liget.style.color = "green";
+liget.innerText = "5";
+
+const ulgetAll = document.querySelectorAll("li");
+return:-`NodeList(3) [li, li, li]` when you go inside prototype of nodeList.`its not array not work array prototype work only NodeList prototype`.
+
+ulgetAll[0].style.color = "red";
+//work
+ulgetAll.forEach((item) => {
+
+  console.log(item.innerText);
+  return one by one all li text
+
+  item.style.background = "yellow";
+  item.style.margin = "10px";
+});
+
+```
+
+### 8. Get element by className
+
+```javascript
+console.log(document.getElementsByClassName(""));
+return:- HTMLCollection [] anothe selecter ma null daga.
+
+const getByClass = document.getElementsByClassName("list-item");
+console.log(getByClass);
+Return :- HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+//How to select and work on all list
+// then convert HTMLCollection [] into Array:-
+let arr = Array.from(getByClass);
+console.log(arr);
+return:- (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+arr.forEach((l) => {
+  console.log(l);
+  return all element
+
+  l.style.color = "black";
+});
+```
+
+
+## Color Changer
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1>Color Changer:</h1>
+    <div class="buttons">
+      <button class="#000000">#000000</button>
+      <button class="#FFFFFF">#FFFFFF</button>
+      <button class="#FFA384">#FFA384</button>
+      <button class="#FF0000">#FF0000</button>
+    </div>
+  </body>
+</html>
+
+```
+
+```javascript
+const buttons = document.querySelectorAll("button");
+const body = document.querySelector("body");
+buttons.forEach((but) => {
+  but.addEventListener("click", (e) => {
+    // body.style.background = but.className;
+    //or
+    if (e.target.className === but.className) {
+      body.style.background = but.className;
+    }
+  });
+});
+```
+
+## Your Body Mass
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1>Calculate Your Body Mass (BMI)</h1>
+    <form>
+      Height(cm): <input type="text" id="height" /><br /><br />
+      Weight(kg): <input type="text" id="weight" /><br /><br />
+      <button>Calcilate</button>
+    </form>
+    <div></div>
+  </body>
+</html>
+
+```
+
+```javascript
+const form = document.querySelector("form");
+//ya do vale ka yah is taraha sa select na kera andar ma ker form ka.
+// const height = document.getElementById("height");
+// const Weight = document.getElementById("weight");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  /* e.preventDefault();  use to stope defoult option a form when submit its data get or post to data base thats way its refresh. to stop this to refresh use this.*/
+
+  const height = parseInt(document.getElementById("height").value);
+  const Weight = parseInt(document.getElementById("weight").value);
+  document.querySelector("div").innerHTML = `BMI is : ${
+    Weight / ((height * height) / 10000).toFixed(2)
+  }`;
+});
+```
+
+## Digital Clock
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2>Your local time</h2>
+    <p id="time">hh:mm:ss</p>
+  </body>
+</html>
+
+```
+
+```javascript
+const time = document.getElementById("time");
+setInterval(() => {
+  //Most IMP for Intriview
+  const localTime = new Date();
+  time.innerHTML = localTime.toLocaleTimeString(undefined, {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+  console.log(localTime.toLocaleTimeString(undefined, { hour12: true }));
+}, 1000);
+```
+
+## Guess The Number
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h2>Guess the number bitween 1 to 100.</h2>
+    <form>
+      <input
+        type="text"
+        name="GuessNumber"
+        inputmode="numeric"
+        placeholder="gased number"
+      />
+      <button>Submit</button>
+    </form>
+    <p><strong>Preview Guess</strong>:<strong class="Preview"></strong></p>
+    <p>
+      <strong>Guess Remaining</strong>:<strong class="Remaining">10</strong>
+    </p>
+    <button id="refresh">Refresh</button>
+  </body>
+</html>
+
+```
+
+```javascript
+let GuessAray = [];
+const randomNumber = Math.floor(Math.random() * 100);
+const form = document.querySelector("form");
+const storeForm = form.innerHTML;
+const refresh = document.querySelector("#refresh");
+const Preview = document.querySelector(".Preview");
+const Remaining = document.querySelector(".Remaining");
+
+refresh.addEventListener("click", (e) => {
+  GuessAray = [];
+  Preview.innerHTML = " ";
+  Remaining.innerHTML = "10";
+  form.innerHTML = storeForm;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let input = document.querySelector("input");
+  input = Number(input.value);
+  if (input > 100 || input < 1) {
+    alert("Please number enter bitween 1 to 100!");
+  } else {
+    Preview.innerHTML += `${input}, `;
+    Remaining.innerHTML = 10 - (GuessAray.length + 1);
+    GuessAray.push(input);
+    if (randomNumber === input) {
+      form.innerHTML = `<h2>Congratulation! You guessed it right, You win!<h2>`;
+    } else if (randomNumber < input) {
+      alert("Your guess is too high! Try again.");
+    } else if (randomNumber > input) {
+      alert("Your guess is too low! Try again.");
+    }
+  }
+
+  if (GuessAray.length > 9) {
+    form.innerHTML = `<h2>You complit the game!<h2>`;
+  }
+});
 ```
