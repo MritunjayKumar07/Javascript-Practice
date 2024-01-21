@@ -2219,7 +2219,7 @@ ul.addEventListener("click", (e) => {
 
 ## #Async Work Diagram
 
-![async work digram](./02_async.png)
+![async work digram](./08_events/02_async.png)
 
 ## Async Code
 
