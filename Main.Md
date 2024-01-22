@@ -2083,8 +2083,8 @@ pageX, pageY, screenX, screenY, offsetX, offsetY which, metaKey,ctrlKey, shiftKe
 
 - When we click on child element then click automaticaly parent also next call.It's called Event Propagation.
 - `parent` -> `child` -> `grandchild` -> `great-grandchild`
-- ested child click ho jata jub kisis ka parents ko click kerta hy to lakin work sabas pahala top to botom keraga.
-- Event Proprgation.2 Propagation :-
+- ested child click ho jata jub kisis ka parents ko click kerta hy to lakin `work sabas pahala top to botom keraga` event Proprgation. 
+- 2 types of event Proprgation:-
 
   1.  Event Bubling,
   2.  Event Capturing
@@ -2093,8 +2093,8 @@ pageX, pageY, screenX, screenY, offsetX, offsetY which, metaKey,ctrlKey, shiftKe
 - Bubbling means from bottom to up.
 - In HTML there are two types of Events.
 
-  1. Traditional Events : mouseover ,mouseout etc..
-  2. Pointer Events : click ,touchstart etc...
+  1. `Traditional Events` : mouseover ,mouseout etc..
+  2. `Pointer Events` : click ,touchstart etc...
 
 - To stop this Event Propgation we can use `stopPropagation()`.
 - By defoult events false hotha hy jo ke event bubling hy.
@@ -2239,7 +2239,7 @@ ul.addEventListener("click", (e) => {
 
 ```
 
-- setTimeout ak time ka bad ak bad code exicute keraga.
+- setTimeout ak time ka bad ak bar code exicute keraga.
 
 ```javascript
 setTimeout(function () {
