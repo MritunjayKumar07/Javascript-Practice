@@ -31,7 +31,7 @@ function createuser(userName, score) {
 - prototype give methos and property of an function.
 - her function ma byDefoult context set hota hy,
  `PersonMarks.prototype` ya jo empty {} object return ker raha hy.
--Hum kya prototype ma apna funcanality add ker sakata hy ya posible 
+- Hum kya prototype ma apna funcanality add ker sakata hy ya posible 
  hy like jo prototype ma rahata hy jo console ma dikata hy slick(), shift(), short() and etc.
 */
 
@@ -44,7 +44,7 @@ createuser.prototype.increment = function () {
 
 createuser.prototype.printme = function () { //define method
   console.log(`Score is ${this.score}`);
-};// Ya abhi tak Koi kam ka nhi jub tak new na laga ho.(Hawa ma hy)
+};// Ya abhi tak Koi kam ka nhi jub tak new na laga ho.(Hawa ma hy).
 
 //const chai = new createuser("chai", 25);
 // const tea = createuser("tea", 250);
@@ -60,7 +60,7 @@ const tea = new createuser("tea", 250);
 chai.printme(); // Score is 25
 
 
-/*Java Cript ma sirf method or function ko call kerna hota hy jo prototype ma hota hy. Jis bhe function ko ap call kia hy 
+/*JavaSript ma sirf method or function ko call kerna hota hy jo prototype ma hota hy. Jis bhe function ko ap call kia hy 
 chai.printme(); usa java script dhund ka data hy prototype ma sa 
 jaysa ke agar app array ma map use karinga to hum thoda na array.prototype.map() ya array.prototype.prototype.map() likhata hy
 hum direct likhata hy array.map(), JavaScript ya features provide kerta hy ke ke ap direct call kera sackata hy.

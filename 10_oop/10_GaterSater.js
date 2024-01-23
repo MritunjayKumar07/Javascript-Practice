@@ -14,7 +14,7 @@ class User {
   i want to customize value set in geter (get) and when any one want to set the value 
   in contructer then, i want to eddit the value and customize and then set the value in constructer.*/
 
-  //Suppose kigi ka hum password dana he nhi chata to use karing geter and seter.
+  //Suppose kisi ka hum password dana he nhi chata to use karing geter and seter.
 
   /*Get use to when any on get the value outside from class the get my way. */
 
